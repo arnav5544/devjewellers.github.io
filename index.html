@@ -31,6 +31,17 @@ function calculate(){
 //writing functions to automate
 
 //selecting values of inputs
+var rt1=document.getElementById("rt1").value
+var rt2=document.getElementById("rt2").value
+var rt3=document.getElementById("rt3").value
+var rt4=document.getElementById("rt4").value
+var rt5=document.getElementById("rt5").value
+var rt6=document.getElementById("rt6").value
+var rt7=document.getElementById("rt7").value
+var rt8=document.getElementById("rt8").value
+var rt9=document.getElementById("rt9").value
+
+
 var nrt1=Number(document.getElementById("rt1").value)
 var nrt2=Number(document.getElementById("rt2").value)
 var nrt3=Number(document.getElementById("rt3").value)
@@ -42,8 +53,26 @@ var nrt8=Number(document.getElementById("rt8").value)
 var nrt9=Number(document.getElementById("rt9").value)
 
 
+
+
+var grt=Number(document.getElementById("gptv").value)
+
+var sirt=Number(document.getElementById("sptv").value)
+
+var sirt1=document.getElementById("sptv").value
+
 var ntds=Number(document.getElementById("tds").value)
 var tds=document.getElementById("tds").value
+
+var hog=sirt/85.7339
+var sptv=hog.toFixed(2)
+if(Number.isInteger(sirt)==true)
+{
+
+
+document.getElementById("sptv").value=sptv}
+
+
 
 
 
@@ -56,6 +85,8 @@ var art6=nrt6/10
 var art7=nrt7/10
 var art8=nrt8/10
 var art9=nrt9/10
+
+
 
 var srt1=nrt1/1000
 var srt2=nrt2/1000
@@ -177,6 +208,9 @@ var clr9=document.getElementById("clr9")
 
 //writing so that input auto will only work only when form is filled
 
+
+
+
 if(dis1.length==0 && qty1.length==0 && wt1.length==0 && mkg1.length==0){
     nwt1=0;
     nwtt1=0;
@@ -256,6 +290,7 @@ document.getElementById("wtt1").value=tw1
 
 
 if(clr1.value=="gold"){
+document.getElementById("rt1").value=grt
   var ramt1=(art1*nwt1*nqty1)+nmkg1
 document.getElementById("amt1").value=ramt1
 clr1.style.backgroundColor="gold"
@@ -264,6 +299,12 @@ clr1.style.color="gold"
 }
 
 if(clr1.value=="silver"){
+
+if(Number.isInteger(sirt)==true)
+{
+
+
+document.getElementById("rt1").value=sirt}
   var ramt1=(srt1*nwt1*nqty1)+nmkg1
 document.getElementById("amt1").value=ramt1
 clr1.style.backgroundColor="silver"
@@ -280,6 +321,9 @@ tw2=w2.toFixed(4)
 document.getElementById("wtt2").value=tw2
 
 if(clr2.value=="gold"){
+
+document.getElementById("rt2").value=grt
+
   var ramt2=(art2*nwt2*nqty2)+nmkg2
 document.getElementById("amt2").value=ramt2
 clr2.style.backgroundColor="gold"
@@ -288,6 +332,13 @@ clr2.style.color="gold"
 }
 
 if(clr2.value=="silver"){
+if(Number.isInteger(sirt)==true)
+{
+
+
+document.getElementById("rt2").value=sirt}
+
+
   var ramt2=(srt2*nwt2*nqty2)+nmkg2
 document.getElementById("amt2").value=ramt2
 clr2.style.backgroundColor="silver"
@@ -305,6 +356,9 @@ tw3=w3.toFixed(4)
 document.getElementById("wtt3").value=tw3
 
 if(clr3.value=="gold"){
+
+document.getElementById("rt3").value=grt
+
   var ramt3=(art3*nwt3*nqty3)+nmkg3
 document.getElementById("amt3").value=ramt3
 clr3.style.backgroundColor="gold"
@@ -313,6 +367,13 @@ clr3.style.color="gold"
 }
 
 if(clr3.value=="silver"){
+
+if(Number.isInteger(sirt)==true)
+{
+
+
+document.getElementById("rt3").value=sirt}
+
   var ramt3=(srt3*nwt3*nqty3)+nmkg3
 document.getElementById("amt3").value=ramt3
 clr3.style.backgroundColor="silver"
@@ -329,6 +390,9 @@ tw4=w4.toFixed(4)
 document.getElementById("wtt4").value=tw4
 
 if(clr4.value=="gold"){
+
+document.getElementById("rt4").value=grt
+
   var ramt4=(art4*nwt4*nqty4)+nmkg4
 document.getElementById("amt4").value=ramt4
 clr4.style.backgroundColor="gold"
@@ -337,6 +401,12 @@ clr4.style.color="gold"
 }
 
 if(clr4.value=="silver"){
+
+if(Number.isInteger(sirt)==true)
+{
+
+
+document.getElementById("rt4").value=sirt}
   var ramt4=(srt4*nwt4*nqty4)+nmkg4
 document.getElementById("amt4").value=ramt4
 clr4.style.backgroundColor="silver"
@@ -354,6 +424,9 @@ tw5=w5.toFixed(4)
 document.getElementById("wtt5").value=tw5
 
 if(clr5.value=="gold"){
+
+document.getElementById("rt5").value=grt
+
   var ramt5=(art5*nwt5*nqty5)+nmkg5
 document.getElementById("amt5").value=ramt5
 clr5.style.backgroundColor="gold"
@@ -362,6 +435,12 @@ clr5.style.color="gold"
 }
 
 if(clr5.value=="silver"){
+if(Number.isInteger(sirt)==true)
+{
+
+
+document.getElementById("rt5").value=sirt}
+
   var ramt5=(srt5*nwt5*nqty5)+nmkg5
 document.getElementById("amt5").value=ramt5
 clr5.style.backgroundColor="silver"
@@ -379,6 +458,9 @@ tw6=w6.toFixed(4)
 document.getElementById("wtt6").value=tw6
 
 if(clr6.value=="gold"){
+
+document.getElementById("rt6").value=grt
+
   var ramt6=(art6*nwt6*nqty6)+nmkg6
 document.getElementById("amt6").value=ramt6
 clr6.style.backgroundColor="gold"
@@ -387,6 +469,12 @@ clr6.style.color="gold"
 }
 
 if(clr1.value=="silver"){
+
+if(Number.isInteger(sirt)==true)
+{
+
+
+document.getElementById("rt6").value=sirt}
   var ramt6=(srt6*nwt6*nqty6)+nmkg6
 document.getElementById("amt6").value=ramt6
 clr6.style.backgroundColor="silver"
@@ -403,6 +491,9 @@ tw7=w7.toFixed(4)
 document.getElementById("wtt7").value=tw7
 
 if(clr7.value=="gold"){
+
+document.getElementById("rt7").value=grt
+
   var ramt7=(art7*nwt7*nqty7)+nmkg7
 document.getElementById("amt7").value=ramt7
 clr7.style.backgroundColor="gold"
@@ -411,6 +502,11 @@ clr7.style.color="gold"
 }
 
 if(clr7.value=="silver"){
+if(Number.isInteger(sirt)==true)
+{
+
+
+document.getElementById("rt7").value=sirt}
   var ramt7=(srt7*nwt7*nqty7)+nmkg7
 document.getElementById("amt7").value=ramt7
 clr7.style.backgroundColor="silver"
@@ -427,6 +523,9 @@ tw8=w8.toFixed(4)
 document.getElementById("wtt8").value=tw8
 
 if(clr8.value=="gold"){
+
+document.getElementById("rt8").value=grt
+
   var ramt8=(art8*nwt8*nqty8)+nmkg8
 document.getElementById("amt8").value=ramt8
 clr8.style.backgroundColor="gold"
@@ -435,6 +534,13 @@ clr8.style.color="gold"
 }
 
 if(clr8.value=="silver"){
+
+if(Number.isInteger(sirt)==true)
+{
+
+
+document.getElementById("rt8").value=sirt}
+
   var ramt8=(srt8*nwt8*nqty8)+nmkg8
 document.getElementById("amt8").value=ramt8
 clr8.style.backgroundColor="silver"
@@ -446,11 +552,14 @@ clr8.style.color="silver"
 //function for 9th row
 if(dis9.length>0 && qty9.length>0 && wt9.length>0 && mkg9.length>0){
 
-var w9=wt9/11.664
+var w9=(wt9/11.664) 
 tw9=w9.toFixed(4)
 document.getElementById("wtt9").value=tw9
 
 if(clr9.value=="gold"){
+
+document.getElementById("rt9").value=grt
+
   var ramt9=(art9*nwt9*nqty9)+nmkg9
 document.getElementById("amt9").value=ramt9
 clr9.style.backgroundColor="gold"
@@ -459,6 +568,14 @@ clr9.style.color="gold"
 }
 
 if(clr9.value=="silver"){
+
+
+if(Number.isInteger(sirt)==true)
+{
+
+
+document.getElementById("rt9").value=sirt}
+
   var ramt9=(srt9*nwt9*nqty9)+nmkg9
 document.getElementById("amt9").value=ramt9
 clr9.style.backgroundColor="silver"
@@ -469,10 +586,10 @@ clr9.style.color="silver"
 
 
 }
-var twt=nwt1+nwt2+nwt3+nwt4+nwt5+nwt6+nwt7+nwt8+nwt9
+var twt=(nwt1*nqty1)+(nwt2*nqty2)+(nwt3*nqty3)+(nwt4*nqty4)+(nwt5*nqty5)+(nwt6*nqty6)+(nwt7*nqty7)+(nwt8*nqty8)+(nwt9*nqty9)
 
 document.getElementById("twt").value=twt+"g"
-var twtt=nwtt1+nwtt2+nwtt3+nwtt4+nwtt5+nwtt6+nwtt7+nwtt8+nwtt9
+var twtt=(nwtt1*nqty1)+(nwtt2*nqty2)+(nwtt3*nqty3)+(nwtt4*nqty4)+(nwtt5*nqty5)+(nwtt6*nqty6)+(nwtt7*nqty7)+(nwtt8*nqty8)+(nwtt9*nqty9)
 document.getElementById("twtt").value=twtt+"t"
 var tamt=ramt1+ramt2+ramt3+ramt4+ramt5+ramt6+ramt7+ramt8+ramt9
 document.getElementById("tamt").value=tamt
@@ -481,6 +598,7 @@ document.getElementById("sttl").value=sttl
 
 
 }
+
 </script>
     <style>body{
     /*css for table*/
@@ -760,7 +878,29 @@ button{
 }
 #fln{border:2px solid gold;
 border-bottom:none;
-border-left:none;}</style>
+border-left:none;}
+
+#spt{
+    font-weight:bold;
+    width:4.8cm;
+}
+#sptv{
+    width:1.6cm;
+}
+#gpt{
+    font-weight:bold;
+    width:4.8cm;
+}
+#gptv{
+    width:1.6cm;
+}
+
+
+
+
+
+
+</style>
     <body>
     <!--creating main table-->
         <table>
@@ -837,7 +977,7 @@ border-left:none;}</style>
                 <td class="td">
                           <input class="mkg" id="mkg1"name="mkg"type="number" value="">
                 </td>
-                <td class="td"><input  class="rt" id="rt1"type="number" name="rt"value=""></td>
+                <td class="td"><input  class="rt" disabled id="rt1"type="number" name="rt"value=""></td>
                 <td class="td" id="a">
                    
                 <input disabled name="amt" class="amt" id="amt1"type="number" value=""></td>
@@ -853,7 +993,7 @@ border-left:none;}</style>
                 <td class="td">
                           <input class="mkg" id="mkg2"name="mkg"type="number" value="">
                 </td>
-               <td class="td"><input  class="rt" id="rt2"type="number" name="rt"value=""></td>
+               <td class="td"><input  class="rt"disabled id="rt2"type="number" name="rt"value=""></td>
                 <td class="td" id="b">
                    
                 <input disabled name="amt" class="amt" id="amt2"type="number" value=""></td>
@@ -869,7 +1009,7 @@ border-left:none;}</style>
                 <td class="td">
                           <input class="mkg" id="mkg3"name="mkg"type="number" value="">
                 </td>
-                <td class="td"><input  class="rt" id="rt3"type="number" name="rt"value=""></td>
+                <td class="td"><input  class="rt"disabled id="rt3"type="number" name="rt"value=""></td>
                 <td class="td" id="j">
                    
                 <input disabled name="amt" class="amt" id="amt3"type="number" value=""></td>
@@ -902,7 +1042,7 @@ border-left:none;}</style>
                 <td class="td">
                           <input class="mkg" id="mkg5"name="mkg"type="number" value="">
                 </td>
-                <td class="td"><input  class="rt" id="rt5"type="number" name="rt"value=""></td>
+                <td class="td"><input  class="rt"disabled id="rt5"type="number" name="rt"value=""></td>
                 <td class="td" id="d">
                    
                 <input disabled name="amt" class="amt" id="amt5"type="number" value=""></td>
@@ -918,7 +1058,7 @@ border-left:none;}</style>
                 <td class="td">
                           <input class="mkg" id="mkg6"name="mkg"type="number" value="">
                 </td>
-                <td class="td"><input  class="rt" id="rt6"type="number" name="rt"value=""></td>
+                <td class="td"><input  class="rt"disabled id="rt6"type="number" name="rt"value=""></td>
                 <td class="td" id="e">
                    
                 <input disabled name="amt" class="amt" id="amt6"type="number" value=""></td>
@@ -934,7 +1074,7 @@ border-left:none;}</style>
                 <td class="td">
                           <input class="mkg" id="mkg7"name="mkg"type="number" value="">
                 </td>
-                <td class="td"><input  class="rt" id="rt7"type="number" name="rt"value=""></td>
+                <td class="td"><input  class="rt"disabled id="rt7"type="number" name="rt"value=""></td>
                 <td class="td" id="f">
                    
                 <input disabled name="amt" class="amt" id="amt7"type="number" value=""></td>
@@ -950,7 +1090,7 @@ border-left:none;}</style>
                 <td class="td">
                           <input class="mkg" id="mkg8"name="mkg"type="number" value="">
                 </td>
-                <td class="td"><input  class="rt" id="rt8"type="number" name="rt"value=""></td>
+                <td class="td"><input  class="rt"disabled id="rt8"type="number" name="rt"value=""></td>
                 <td class="td" id="g">
                    
                 <input disabled name="amt" class="amt" id="amt8"type="number" value=""></td>
@@ -966,7 +1106,7 @@ border-left:none;}</style>
                 <td class="td">
                           <input class="mkg" id="mkg9"name="mkg"type="number" value="">
                 </td>
-                <td class="td"><input  class="rt" id="rt9"type="number" name="rt"value=""></td>
+                <td class="td"><input  class="rt"disabled id="rt9"type="number" name="rt"value=""></td>
                 <td class="td" id="h">
                    
                 <input disabled name="amt" class="amt" id="amt9"type="number" value=""></td>
@@ -984,14 +1124,16 @@ border-left:none;}</style>
             </tr>
             
             <tr class="tr">
-            <td class="td" id="fln"colspan="5" style="border-bottom:none;"></td>
+            <td class="td" id="fln"colspan="5" style="border-bottom:none;"><input  disabled id="spt" class="dis"value="                         Silver Rate per Tola:"><label>Rs.</label>
+                <input  name="spt" class="dis"type="number"id=sptv value=""></td>
                 <td colspan="2"class="td"><input  disabled class="rt"type="text" id="dn"value="           Discount:"></td>
                 <td id="go"><label for="amt">Rs.</label>
                 <input  name="amt" class="amt"type="number"id=tds value=""></td>
             </tr>
             
               <tr class="tr">
-            <td class="td"id="fln" colspan="5"></td>
+            <td class="td"id="fln" colspan="5"><input  disabled id="gpt" class="dis"value="                            Gold Rate per 10g:"><label>Rs.</label>
+                <input  name="gpt" class="dis"type="number"id=gptv value=""></td>
                 <td colspan="2"class="td"><input disabled class="rt"type="text" id="sttln"value="          Sub Total:"></td>
                 <td id="go"><label for="amt">Rs.</label>
                 <input disabled name="amt" class="amt"type="number"id=sttl value=""></td>
