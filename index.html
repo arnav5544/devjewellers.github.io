@@ -25,7 +25,6 @@ function show(){
 function pnt(){
      btns=document.getElementById("btns").style.display="none"
      window.print()
-     setTimeout(show,5000)
 }
 
 //new function 
@@ -992,7 +991,7 @@ border-left:none;}
 </style>
     <body>
     <!--creating main table-->
-        <table>
+        <table onclick="show">
         <!--first row-->
             <tr class="up">
             <td class="up"id="logo">
