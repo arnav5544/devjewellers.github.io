@@ -19,9 +19,13 @@ document.getElementById("ind").value=date
 calculate()
 calculate ()
 }
+function show(){
+    btns=document.getElementById("btns").style.display="inline-block"
+}
 function pnt(){
      btns=document.getElementById("btns").style.display="none"
      window.print()
+     setTimeout(show,5000)
 }
 
 //new function 
