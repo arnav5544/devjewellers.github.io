@@ -688,8 +688,8 @@ clr9.style.color="dodgerblue"
 
 }
 var twt=(nwt1*nqty1)+(nwt2*nqty2)+(nwt3*nqty3)+(nwt4*nqty4)+(nwt5*nqty5)+(nwt6*nqty6)+(nwt7*nqty7)+(nwt8*nqty8)+(nwt9*nqty9)
-
-document.getElementById("twt").value=twt+"g"
+var rtwt=twt.toFixed(4)
+document.getElementById("twt").value=rtwt+"g"
 var twtt=(nwtt1*nqty1)+(nwtt2*nqty2)+(nwtt3*nqty3)+(nwtt4*nqty4)+(nwtt5*nqty5)+(nwtt6*nqty6)+(nwtt7*nqty7)+(nwtt8*nqty8)+(nwtt9*nqty9)
  var twttt=twtt.toFixed(4)
 document.getElementById("twtt").value=twttt+"t"
