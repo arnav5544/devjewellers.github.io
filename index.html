@@ -1162,8 +1162,9 @@ document.getElementById("sttl").value=sttlr
 </script>
     </head>
     <body>
+<div style="float:right;">
     <!--creating main table-->
-        <table onclick="show()" id="table" style="float:right;">
+        <table onclick="show()" id="table" >
         <!--first row-->
             <tr class="up">
             <td class="up"id="logo">
@@ -1511,7 +1512,7 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
             </tr>
             
         </table>
-<p style="font-size:10px;float:right;margin-,right:9cm;">&copy Dev Jewellers</p>
+<p style="font-size:10px;float:left;margin-left:50px;">&copy Dev Jewellers</p>
         <datalist id="pdct">
             <option value="पायल(दुल्हन)">
             <option value="पायल(साजन)">
@@ -1610,10 +1611,11 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
             <option value="silver">
         </datalist>
         <!--end of main table-->
-        <div id="btns" style="float:right;">
+        <div id="btns" >
             <button style="width:3cm;background-color:dodgerblue;" onclick="opt()">Show More</button>
         <button onclick="main()">Calculate</button>
         <button style="width:3cm;background-color:dodgerblue;" onclick="less()">Show less</button>
         <button style="background-color:mediumseagreen;"onclick="pnt()">Print</button></div>
+</div>
     </body>
 </html>
