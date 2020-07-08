@@ -10,7 +10,59 @@
     content="arnav kumar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Jewellers</title>
-    <style>body{
+     <style>
+
+.dis{
+    width:3.19cm;
+}
+
+
+
+
+/*css for quantity*/
+.qty{
+    width:.5cm;
+}
+/*css for rate*/
+.rt{
+    width:.8cm;
+}
+/*css for amount*/
+.amt{
+    width:1.5cm;
+    
+}
+/*css for making*/
+.mkg{width:0.74cm;}
+/*css for weight*/
+.wt{
+    width:1.2cm;
+}
+.wtt{
+    width:1.4cm;
+}
+#twtt{
+    width:1.4cm;
+}
+/*css for total*/
+#ttl{
+    font-weight:bold;
+}
+/*css for total amount*/
+#tamt,#tds{
+    width:1.4cm;
+}
+#btns{border:2px solid orangered;
+border-radius:5px;
+width:13.1cm;
+
+margin-top:50px;
+        margin-left:25px;}
+
+
+
+
+body{
     /*css for table*/
 }table{margin:5px;
 height:18cm;
@@ -33,8 +85,11 @@ p{font-size:13px;}
 }
 #tds{width:1.3cm;}
 #dn{
-    width:2.2cm;
+    width:1.75cm;
     font-weight:bold;
+}
+ttl{
+	width:1.75cm
 }
 ul{width:100%;
 height:1cm;
@@ -42,7 +97,7 @@ height:1cm;
     margin:0px;
 }
 #ttlfw{
-    width:4cm;
+    width:3.9cm;
     font-weight:bold;
     border-right:2px solid gol;
     border:;
@@ -71,7 +126,7 @@ border:2px solid re;}
     padding:px;
     transform:translateX(6px);
 }
-#sign{width:5cm;
+#sign{width:5c;
 height:1cm;}
 #foot{
     height:.5cm;
@@ -83,12 +138,12 @@ div,table,th,td,tr,p,h1,h2,h3,h4,h5,li,h6{
     margin:0px;
 }
 /*setting font size for shop address line:12*/
-#cat{b;
+#cat{border:2px solid blu;
     font-size:20px;
     margin:5px;
     transform:translateY(-15px);
     transform:translateX(30px);
-color:darkslategray;
+color:black;
     width:4.5cm;
 }
 #tc{
@@ -102,13 +157,13 @@ color:darkslategray;
     color:#FF0000;
   font-family: 'Josefin Sans', sans-serif;
 font-family: 'Rajdhani', sans-serif;
-    font-size:20px;
+    font-size:25px;
     font-weight:normal;
-  transform:translate(8px,0px);}
+  transform:translate(32px,0px);}
 #hd{
     color:#3457D5;
    font-family: 'Josefin Sans', sans-serif;
-    font-size:20px;
+    font-size:24px;
     
   transform:translateY();
     
@@ -179,7 +234,7 @@ border-bottom:2px solid orangered;
     font-size:15px;
     font-weight:bolder;
     font-family:Serif;
-    transform:translateX(60px);
+    transform:translateX(75px);
 }
 
 /*CSS for inner Table*/
@@ -231,48 +286,7 @@ font-size:10px;}
         font-size:15px;
     }
 }
-.dis{
-    width:3.54cm;
-}
-/*css for quantity*/
-.qty{
-    width:.5cm;
-}
-/*css for rate*/
-.rt{
-    width:1.15cm;
-}
-/*css for amount*/
-.amt{
-    width:1.5cm;
-    
-}
-/*css for making*/
-.mkg{width:1cm;}
-/*css for weight*/
-.wt{
-    width:1.2cm;
-}
-.wtt{
-    width:1.4cm;
-}
-#twtt{
-    width:1.4cm;
-}
-/*css for total*/
-#ttl{
-    font-weight:bold;
-}
-/*css for total amount*/
-#tamt,#tds{
-    width:1.4cm;
-}
-#btns{border:2px solid orangered;
-border-radius:5px;
-width:13.1cm;
 
-margin-top:50px;
-        margin-left:25px;}
 .th{
     font-size:9px;
 }
@@ -288,12 +302,12 @@ button{
     font-size:16px;
 }
 #sttln{
-    width:2.2cm;    
+    width:1.75cm;    
     font-weight:bold;
     color:mediumseagreen;
 }
 #sttl{
-    width:1.4cm;
+    width:1.2cm;
 }
 #fln{border:2px solid gold;
 border-bottom:none;
@@ -301,14 +315,14 @@ border-left:none;}
 
 #spt{
     font-weight:bold;
-    width:2.7cm;
+    width:3cm;
 }
 #sptv{
     width:2.1cm;
 }
 #gpt{
     font-weight:bold;
-    width:2.7cm;
+    width:3cm;
 }
 #gptv{
     width:2.1cm;
@@ -318,7 +332,10 @@ border-left:none;}
 #subt1,#subt2{width:2.83cm;}
 #first,#second,#third{display:none;}
 #first{text-align:center ;}
-span{text-align:center;}</style>
+span{text-align:center;}
+
+</style>
+
     <script>function main(){
 //writing Date function for invoice date
     var d= new Date();
@@ -334,6 +351,7 @@ calculate ()
 }
 function show(){
     btns=document.getElementById("btns").style.display="inline-block"
+	
 }
 function pnt(){
      btns=document.getElementById("btns").style.display="none"
@@ -1174,21 +1192,21 @@ document.getElementById("sttl").value=sttlr
         <!--first row-->
             <tr class="up">
             <td class="up"id="logo">
-            <img id="img" src="https://imagehost.com.au//d7amw0Kd9r/IMG_20200603_194918_5ed7b17bbb075.jpg">
-            <p style="font-size:11px;font-family:serif;margin-left:2px;"><b>Prop: Arun Thakur</b></p>
+            <img id="img" src="devjewellers.jpg">
+            <p style="font-size:13px;font-family:serif;margin-left:2px;color:maroon;"><b>Prop: Arun Thakur</b></p>
             <td class="ip">
               <div id="cat">
-                            <img style="width:30px;float:right;transform:translate(-0cm,-0cm)"src="https://imagehost.com.au//d7amw0Kd9r/Project Capture (4)_5eda02f2a5cb6.jpg"><p id="hd2">देव ज्वेलर्स</p> 
+                            <p id="hd2">देव ज्वेलर्स</p> 
                 <p id="hd">Dev Jewellers</p>
-                <p>Main Road, Pratapganj</p>
-                <p>Supaul, Bihar, 852125</p>
+                <p style="transform:translateX(15px);">Main Road, Pratapganj</p>
+                <p style="transform:translateX(15px);">Supaul, Bihar, 852125</p>
                 
                 
             </div>
             </td>
             <td class="up"id="info">
                 <p style="font-size:12px;color:red;margin:1px;margin-left:none;transform:translateY(-.45cm)"><b style="color:maroon;">Reg. No:</b>BR36A0013568</p>  
-            <img id="phn" src="https://imagehost.com.au//d7amw0Kd9r/PicsArt_06-05-01.39.28_5eda001b843da.png">
+            <img id="phn" src="whatsapp.png">
               <p>7070888850,<br>9546243333</p>
 <p>arunsily@gmail.com</p>
             </td>
@@ -1432,14 +1450,14 @@ document.getElementById("sttl").value=sttlr
                 <input disabled name="amt" class="amt" id="amt9"type="text" value=""></td>
             </tr>
             <tr style="border:non;" id="lr">
-             <td colspan="2" style="border-right:2px solid gold;border-left:none"><input disable class="rt"type="text" id="ttlfw"value="                                      कुल वजन:"></td>
+             <td colspan="2" style="border-right:2px solid gold;border-left:none"><input disabled class="rt"type="text" id="ttlfw"value="                                     कुल वजन:"></td>
                 
                 <td style="border-right:2px solid gold;"> <input disabled name="amt" class="wt"type="text"id=twtg value=""></td>
                 <td style="border-right:2px solid gold;"> <input disabled name="amt" class="wt"type="text"id=twts value=""></td>
                 <td style="border-right:2px solid gold;"> <input disabled name="amt" class="wtt"type="text"id=twttg value=""></td>
                 <td style="border-right:2px solid gold;"> <input disabled name="amt" class="wtt"type="text"id=twtts value=""></td>
                 <td></td>
-                <td class="td"><input disabled class="rt"type="text" id="ttl"value="  Total:"></td>
+                <td class="td"><input disabled class="rt"type="text" id="ttl"value=" Total:"></td>
                 <td id="go">
                 <input disabled name="amt" class="amt"type="text"id=tamt value=""></td>
             </tr>
@@ -1475,7 +1493,7 @@ document.getElementById("sttl").value=sttlr
             <td style="border-top:none;border-bottom:none;" class="td" colspan="2"></td>
             <td class="td"  id="fln"colspan="4" style="border-bottom:none;"><input  disabled id="spt" class="dis"value=" चांदी रेट प्रति किलो:"><label>Rs.</label>
                 <input  name="spt" class="dis"type="text"id=sptv value=""></td>
-                 <td style="border:2px solid gold"colspan="2"class="td"><input  disabled class="rt"type="text" id="dn"value="           Discount:"></td>
+                 <td style="border:2px solid gold"colspan="2"class="td"><input  disabled class="rt"type="text" id="dn"value="       Discount:"></td>
                 <td style="border:2px solid gold;border-right:none;" id="go">        <input  name="amt" class="amt"type="text"id=tds value=""></td>
             </tr>
             
@@ -1483,7 +1501,7 @@ document.getElementById("sttl").value=sttlr
               <td class="td" style="border-top:none;border-bottom:none;"colspan="2"></td>
             <td style="border:2px solid gold"class="td"id="fln" colspan=4"><input  disabled id="gpt" class="dis"value=" सोना रेट प्रति 10 ग्राम:"><label>Rs.</label>
                 <input  name="gpt" class="dis"type="text"id=gptv value=""></td>  
-                <td style="border:2px solid gold" colspan="2"class="td"><input disabled class="rt"type="text" id="sttln"value="          Sub Total:"></td>
+                <td style="border:2px solid gold" colspan="2"class="td"><input disabled class="rt"type="text" id="sttln"value="      Sub Total:"></td>
                 <td style="border:2px solid gold;border-right:none;" id="go">        <input disabled name="amt" class="amt"type="text"id=sttl value=""></td>
             </tr>
             
@@ -1618,10 +1636,11 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
         </datalist>
         <!--end of main table-->
         <div id="btns" >
+	<button onclick="main()">Calculate</button>
             <button style="width:3cm;background-color:dodgerblue;" onclick="opt()">Show More</button>
-        <button onclick="main()">Calculate</button>
+        
         <button style="width:3cm;background-color:dodgerblue;" onclick="less()">Show less</button>
         <button style="background-color:mediumseagreen;"onclick="pnt()">Print</button></div>
-
+	
     </body>
 </html>
