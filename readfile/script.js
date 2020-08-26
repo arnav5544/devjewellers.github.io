@@ -1,6 +1,3 @@
-var myObj={    company:{        name:"Dev Jewellers",        address:"main road,pratapganj, supaul,852125,bihar,india",        contact:{        phone:"7070888850",                alternate:"9546243333",                email:"arunsily@gmail.com"    },        prop:"Arun Kumar Thakur"        },        customer:{        name:"cname",        address:"caddress",        phone:"cphone",                    },    product:[{discription:"chain",weight:"0g",making:"0",rate:"76",total:"5885"},{discription:"cat",weight:"0g",making:"0",rate:"76",total:"5885"},{discription:"dog",weight:"0g",making:"0",rate:"76",total:"5885"},{discription:"roll",weight:"0g",making:"0",rate:"76",total:"5885"},{discription:"rock",weight:"0g",making:"0",rate:"76",total:"5885"},{discription:"paper",weight:"0g",making:"0",rate:"76",total:"5885"},{discription:"meme",quantity:66,weight:"0g",making:"0",rate:"76",total:"5885"}],
-}
-location.hash=encodeURI(JSON.stringify(myObj))
 
 
 
