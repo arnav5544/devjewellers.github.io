@@ -84,7 +84,7 @@ input.addEventListener('change', function(){
  /*handaling filereader load*/
 fr.onload=function(){ 
 /*operation to be done with fr.result*/
-window.open("https://devjewellers.github.io/readfile/#"+encodeURI(fr.result));
+window.location.assign("https://devjewellers.github.io/readfile/#"+encodeURI(fr.result));
 /*operation end*/ } 
 fr.readAsText(this.files[0]); 
 }) 
