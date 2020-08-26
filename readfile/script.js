@@ -5,8 +5,10 @@
 
 
 if(location.hash){
-
-    const dj=JSON.parse(decodeURI(location.hash.replace('#',"")));
+    var rawUriDj=location.hash
+    var uriDj=rawUriDj.replace('#',"")
+var rawDj=decodeURI(uriDj);
+    const dj=JSON.parse(rawDj);
     
     var itemNo=0;
     
