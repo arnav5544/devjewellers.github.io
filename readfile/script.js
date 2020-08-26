@@ -7,7 +7,7 @@
 if(location.hash){
     var rawUriDj=location.hash
     var uriDj=rawUriDj.replace('#',"")
-var rawDj=decodeURI(uriDj);
+var rawDj=decodeURI(uriDj).replace(/\\/g,"");
     const dj=JSON.parse(rawDj);
     
     var itemNo=0;
