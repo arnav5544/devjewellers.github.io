@@ -1,0 +1,31 @@
+.left{
+    float:left;
+}
+.right{
+    float:right;
+
+}
+.center{
+    text-align:center;
+}
+p{
+    margin:10px 5px;
+    color:dodgerblue;
+}
+h1{
+    margin:10px 10px;
+    font-family:cursive;
+    color:red;
+}
+h2{
+    margin:10px 10px;
+    font-family:serif;
+    color:indigo;
+}
+b{color:green;}
+hr{border-color:red;
+border-style:solid;}
+.blue-hr{
+    border-color:red;
+border-style:solid;
+}
