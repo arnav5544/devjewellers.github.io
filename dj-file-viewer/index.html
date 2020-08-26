@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta name="author"
+    content="arnav kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <title>.dj File Viewer</title>
+    </head>
+    <style>
+body{
+font-family:sans-serif;
+}
+@media only screen and (min-width: 500px) {
+  #inputBox{
+   width:6.5cm !important;
+height:2.5cm !important;
+font-size:1.5em;
+
+  }
+h3{
+font-size:1.5em;
+}
+        #inputBox{
+            width:3.5cm;
+            height:1.5cm;
+            color:white;
+            background-color:indigo;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:3px;
+        }
+        #inputBox:hover{
+            backgroud-color:red;
+            outline:2px solid orange;
+            
+        }
+        .flex-c{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+        }
+        code{
+            background-color:indigo;
+            color:rgb(244,244,244);
+            border-radius:3px;
+            margin-right:3px;
+        }
+    </style>
+    
+    <body>
+        <section>
+            <section class="flex-c">
+                <div>
+                    <h3>Upload your <code> .dj </code>  file</h3>
+                    <div id="inputBox">
+                    <label id="fileLabel" for="fileInput">Choose a File</label></div>
+                    <input style="display:none;"type="file" id="fileInput">
+                    
+                </div>
+            </section>
+        </section>
+        <div id="output"></div>
+    </body>
+    <script>
+       var inputBox= document.getElementById("inputBox");
+       var inputLabel=document.getElementById("fileLabel");
+       var inputEl=document.getElementById("fileInput");
+       inputEl.addEventListener('change',()=>{if(inputLabel.innerHTML==""){inputLabel.innerHTML="Choose a File"}
+           inputLabel.innerHTML=(inputEl.value).replace(/\\/g,"").replace("C:fakepath","")
+       })
+    </script>
+    <script type="text/javascript"> 
+    var variable;
+function readFile(input){
+/*Main Function Start*/
+/*Adding Event Lister to Input To handle Any change */
+input.addEventListener('change', function(){
+/*Getting the file reader*/
+ var fr=new FileReader(); 
+ /*handaling filereader load*/
+fr.onload=function(){ 
+/*operation to be done with fr.result*/
+window.open("https://devjewellers.github.io/readfile/#"+encodeURI(fr.result));
+/*operation end*/ } 
+fr.readAsText(this.files[0]); 
+}) 
+/*Main Function End*/
+
+}
+var inputElem=document.getElementById ("fileInput")
+readFile(inputElem,variable)
+
+    </script> 
+
+
+</html>
