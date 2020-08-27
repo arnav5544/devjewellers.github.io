@@ -1671,10 +1671,13 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
   firebase.analytics();
 var database = firebase.database();
 function writeData(id,data) {
-  firebase.database().ref('customerss/' + id).set({
+  firebase.database().ref('customers/' + id).set({
    data:data
   });
 }
-	writeData("1",{chcfc:755775,hfxhfxzx:73547437})			 
+function readData(id){
+firebase.database().ref('customers/'+id).on('value', function(snapshot) {
+  return snapshot.val()});}	
+				 
 </script>	
 </html>
