@@ -1675,10 +1675,10 @@ function writeData(id,data) {
    data:data
   });
 }
-function readData(id,variable){
+function readData(id){
 firebase.database().ref('customers/'+id).on('value', function(snapshot) {
-  variable=snapshot.val()});}	
-		var myData;
-				 readData('0',myData);
+  console.log(snapshot.val())});}	
+		
+			
 </script>	
 </html>
