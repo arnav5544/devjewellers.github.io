@@ -1643,7 +1643,10 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
         
         <button style="width:3cm;background-color:dodgerblue;" onclick="less()">Show less</button>
         <button style="background-color:mediumseagreen;"onclick="pnt()">Print</button></div>
-	
+	  <button style="background-color:mediumseagreen;"onclick="showCustomers()">Get Data</button></div>
+		<section style="display:flex;justify-content:center;align-items:center;width:100%;height:100%;background-color:rgba(0,0,0,0.4);">
+																		<div id="dialog" style="width:90%;height:90%;border-radius:20px;background-color:white;"></div>															
+																		</section>								   
     </body>
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
@@ -1676,6 +1679,7 @@ function writeData(id,data) {
    data:data
   });
 }
+				 
 function readData(id){
 firebase.database().ref('customers/'+id).on('value', function(snapshot) {
   console.log(snapshot.val())});}	
