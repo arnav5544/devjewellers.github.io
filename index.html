@@ -1707,7 +1707,9 @@ firebase.database().ref('customers/'+id).on('value', function(snapshot) {
 				document.body.style.position="fixed"
 								    
 				 }	
-								    
+								  function dialogClose(){
+								    var dialog= document.getElementById("dialog").display="none";
+								    } 
 								    function searchContent() { 
     let input = document.getElementById('searchbar').value 
     input=input.toLowerCase(); 
