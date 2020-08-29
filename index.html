@@ -1719,8 +1719,7 @@ function writeData(id,data) {
 }
 				 
 function readData(id){
-firebase.database().ref('customers/'+id).on('value', function(snapshot) {
-  console.log(snapshot.val())});}	
+firebase.database().ref('customers/'+id).on('value', function(snapshot){console.log(snapshot.val().length)});}	
 		
 	function showCustomers(){
 				var dialog= document.getElementById("dialog") 
