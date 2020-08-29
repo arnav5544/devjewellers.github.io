@@ -106,7 +106,7 @@ var stwt_in_g = document.getElementById("twts").value
 var gtwt_in_t = document.getElementById("twttg").value
 var stwt_in_t = document.getElementById("twtts").value
 
-var total = document.getElementById("ttl").value
+var total = document.getElementById("tamt").value
 
 var subg1 = document.getElementById("subg1").value
 var subt1 = document.getElementById("subt1").value
