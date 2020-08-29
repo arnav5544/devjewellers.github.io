@@ -1712,14 +1712,9 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 var database = firebase.database();
-function writeData(id,data) {
-  firebase.database().ref('customers/' + id).set({
-   data:data
-  });
-}
-				 
-function readData(id){
-firebase.database().ref('customers/'+id).on('value', function(snapshot){console.log(snapshot.val().length)});}	
+function writeData(id,data) {firebase.database().ref('customers/' + id).set(data);}
+function objLength(object){return Object.keys(object).length;}				 
+function readData(id){firebase.database().ref('customers/'+id).on('value', function(snapshot){return snapshot.val();});}	
 		
 	function showCustomers(){
 				var dialog= document.getElementById("dialog") 
