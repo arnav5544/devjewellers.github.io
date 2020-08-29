@@ -1642,10 +1642,10 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
             <button style="width:3cm;background-color:dodgerblue;" onclick="opt()">Show More</button>
         
         <button style="width:3cm;background-color:dodgerblue;" onclick="less()">Show less</button>
-        <button style="background-color:mediumseagreen;"onclick="pnt()">Print</button></div>
+        <button style="background-color:mediumseagreen;"onclick="pnt()">Print</button>
 	  <button style="background-color:mediumseagreen;"onclick="showCustomers()">Get Data</button></div>
-		<section style="display:flex;justify-content:center;align-items:center;width:100vw;height:100vh;background-color:rgba(0,0,0,0.4);position:relative;left:0;top:0;">
-																		<div id="dialog" style="width:90%;height:90%;border-radius:20px;background-color:white;"></div>															
+		<section id="dialog" style="display:none;justify-content:center;align-items:center;width:100vw;height:100vh;background-color:rgba(0,0,0,0.3);position:fixed;left:0;top:0;">
+																		<div id="dialog" style="width:90%;height:90%;border-radius:15px;background-color:white;"></div>															
 																		</section>								   
     </body>
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -1684,6 +1684,11 @@ function readData(id){
 firebase.database().ref('customers/'+id).on('value', function(snapshot) {
   console.log(snapshot.val())});}	
 		
-			
+	function showCustomers(){
+				var dialog= document.getElementById("dialog") 
+				 dialog.style.display="none"
+				document.body.style.position="fixed"
+								    
+				 }		
 </script>	
 </html>
