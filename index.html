@@ -1675,10 +1675,10 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
 															    font-size:initial;
 															    }</style>
 											  <ol id="clist">
-													<li class="contents">arnav</li>
-													<li class="contents">duggu</li>
-													<li class="contents">cat</li>
-													<li class="contents">dog</li>
+													<li class="contents">arnav-kumar-29-09-2020-01-757557555</li>
+													<li class="contents">duggu-kumar-29-09-2020-02875775757</li>
+													<li class="contents">cat-467642642652</li>
+													<li class="contents">dog-66464646</li>
 											  </ol>
 											  </div>										  
 											  
@@ -1712,20 +1712,26 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 var database = firebase.database();
+				 /*database functions start*/
 function writeData(id,data) {firebase.database().ref('customers/' + id).set(data);}
 function objLength(object){return Object.keys(object).length;}				 
 function readData(id){firebase.database().ref('customers/'+id).on('value', function(snapshot){return snapshot.val();});}	
-		
+		/*database functions end*/
+				 /*dialog show function start*/
 	function showCustomers(){
 				var dialog= document.getElementById("dialog") 
 				 dialog.style.display="flex"
 				document.body.style.position="fixed"
 								    
 				 }	
+				/*dialog show function end*/
+								    /*dialog close function start*/
 								  function dialogClose(){
 								    document.getElementById("dialog").style.display="none";
 															document.body.style.position="initial"
 								    } 
+								    /*dialog close function end*/
+								    /*search function start*/
 								    function searchContent() { 
     let input = document.getElementById('searchBar').value 
     input=input.toLowerCase(); 
@@ -1740,5 +1746,6 @@ function readData(id){firebase.database().ref('customers/'+id).on('value', funct
         } 
     } 
 } 
+					  /*search function end*/
 </script>	
 </html>
