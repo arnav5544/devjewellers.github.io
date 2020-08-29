@@ -1645,7 +1645,21 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
         <button style="background-color:mediumseagreen;"onclick="pnt()">Print</button>
 	  <button style="background-color:mediumseagreen;"onclick="showCustomers()">Get Data</button></div>
 		<section id="dialog" style="display:none;justify-content:center;align-items:center;width:100vw;height:100vh;background-color:rgba(0,0,0,0.3);position:fixed;left:0;top:0;">
-																		<div id="dialog" style="width:90%;height:90%;border-radius:15px;background-color:white;"></div>															
+																		<div id="dialog" style="width:90%;height:90%;border-radius:15px;background-color:white;">
+																		<!-- Expandable Textfield -->
+
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+    <label class="mdl-button mdl-js-button mdl-button--icon" for="searchBar">
+      <i class="material-icons">search</i>
+    </label>
+    <div class="mdl-textfield__expandable-holder">
+      <input class="mdl-textfield__input" type="text" id="searchBar">
+      <label class="mdl-textfield__label" for="sample-expandable">Search Bar</label>
+    </div>
+  </div>
+																	
+																		
+																		</div>															
 																		</section>								   
     </body>
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
