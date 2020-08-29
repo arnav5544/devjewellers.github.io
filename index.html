@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	
 
 	    <script src="save.js"></script>
 <script data-ad-client="ca-pub-6290792326682212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -1650,16 +1650,17 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
 																		<div id="dialog" style="width:90%;height:90%;border-radius:15px;background-color:white;">
 																		<!-- Expandable Textfield -->
 
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+  <div style="position:fixed;left:0;top:0;" display:flex;align-items:space-around;>
     <label class="mdl-button mdl-js-button mdl-button--icon" for="searchBar">
       <i class="material-icons">search</i>
     </label>
-    <div class="mdl-textfield__expandable-holder">
-      <input class="mdl-textfield__input" type="text" id="searchBar">
-      <label class="mdl-textfield__label" for="sample-expandable">Search Bar</label>
-    </div>
-  </div>
-																	
+      <input class="mdl-textfield__input" type="search"  onkeyup="searchContent()" placeholder="Search..."id="searchBar" style="outline:none;border-width:0 0 5px 0;border-color:0 0 light-grey 0;">
+     <style>
+     #searchbar:active{
+     border-color:0 0 indigo 0;}
+     </style>
+     <button id="dialogClose" style="background-color:indigo;" onclick="dialogClose()">Close</button>
+	</div>																
 																		
 																		</div>															
 																		</section>								   
@@ -1705,6 +1706,21 @@ firebase.database().ref('customers/'+id).on('value', function(snapshot) {
 				 dialog.style.display="flex"
 				document.body.style.position="fixed"
 								    
-				 }		
+				 }	
+								    
+								    function searchContent() { 
+    let input = document.getElementById('searchbar').value 
+    input=input.toLowerCase(); 
+    let x = document.getElementsByClassName('contents'); 
+      
+    for (i = 0; i < x.length; i++) {  
+        if (!x[i].innerHTML.toLowerCase().includes(input)) { 
+            x[i].style.display="none"; 
+        } 
+        else { 
+            x[i].style.display="list-item";                  
+        } 
+    } 
+} 
 </script>	
 </html>
