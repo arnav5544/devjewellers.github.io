@@ -268,7 +268,7 @@ function get_data(id){
  
 var myData;
 
-firebase.database().ref('customers/'+ String(id)).on('value', function(snapshot){myData=snapshot.val();});
+firebase.database().ref('customers/'+id).on('value', function(snapshot){ myData=snapshot.val(); } );
 
 
 
