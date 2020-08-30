@@ -266,19 +266,6 @@ sub_total:sub_total,
 
 var customer_length;
 
-firebase.database().ref('customers').on('value', function(snapshot){customer_length=snapshot.val();console.log("data downloaded");
-								   
-for(s=1;s<=objLength(customer_length);s++){
- firebase.database().ref('customers/'+s).on('value', function(snapshot){window['customer'+s]=snapshot.val();console.log("data downloaded" +s) } );
-
-}
-								   
-								   
-								   
-								   
-								   
-								   
-								   } );
 
 function get_data(myData){
  
