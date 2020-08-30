@@ -263,16 +263,22 @@ sub_total:sub_total,
 
 
 
-var myData;
-function get_data(id){
+
+var customer_length;
+firebase.database().ref('customers').on('value', function(snapshot){customer_length=snapshot.val();console.log("data downloaded") } );
+
+for(s=1;s<customer_length;s++){
+ firebase.database().ref('customers/'+s).on('value', function(snapshot){window['customer'+s]=snapshot.val();console.log("data downloaded" +s) } );
+
+}
+function get_data(myData){
  
 
 
-firebase.database().ref('customers/'+id).on('value', function(snapshot){ myData=snapshot.val();console.log("data downloaded") } );
 
 
 
-setTimeout(function (){
+
 var invoice_no  = document.getElementById("inno")
 var invoice_date = document.getElementById("ind")
 var name = document.getElementById("nam")
@@ -538,7 +544,7 @@ if(myData.given_silver.subg2>0 && myData.given_silver.subt2>0 && myData.given_si
 else{document.getElementById("first").style.display="none"
     document.getElementById("second").style.display="none"
     document.getElementById("third").style.display="none"}
-},5000);
+
 }
 
 
