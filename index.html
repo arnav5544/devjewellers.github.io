@@ -1769,9 +1769,7 @@ for(s=1;s<=objLength(customer_length);s++){
  /*search function start*/
 								    function searchContent() { 
     let input = document.getElementById('searchBar').value 
-    input=input.toLowerCase(); 
-    let x = document.getElementsByClassName('contents'); 
-      
+    input=input.toLowerCase();   
     for (i = 0; i < x.length; i++) {  
         if (!x[i].innerHTML.toLowerCase().includes(input)) { 
             x[i].style.display="none"; 
