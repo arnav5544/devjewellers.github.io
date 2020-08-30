@@ -1229,7 +1229,7 @@ document.getElementById("sttl").value=sttlr
                 <tr id=scnd><td id="inn"colspan=""><label for="inno" style="margin-left:3px;">
                 <b>Invoice No:</b>
             </label>
-            <input type="text" value="" name="inno" id="inno"></td>
+            <input type="text" value="" name="inno" disabled id="inno"></td>
             <td id="invic">INVOICE</td>
             <td id="invd"><label for="ind"id="in"><b style="margin-left:5px;">Invoice Date:</b></label><input disabled value="" name="ind" id="ind"></td>
             <!--end of third row-->
@@ -1642,13 +1642,15 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
         </datalist>
         <!--end of main table-->
         <div id="btns" >
-		      <i class="material-icons" style="font-size:48px;color:green" onclick="clickCounter(inno)">add_circle</i>
+		    
 	<button onclick="main()">Calculate</button>
             <button style="width:3cm;background-color:dodgerblue;" onclick="opt()">Show More</button>
         
         <button style="width:3cm;background-color:dodgerblue;" onclick="less()">Show less</button>
         <button style="background-color:mediumseagreen;"onclick="pnt()">Print</button>
-	  <button style="background-color:mediumseagreen;"onclick="showCustomers()">Get Data</button></div>
+	  <button style="background-color:mediumseagreen;"onclick="showCustomers()">Get Data</button>
+	<button style="background-color:mediumseagreen;"onclick="save()">Save</button>									   
+										   </div>
 							   
 		<section id="dialog" style="display:none;justify-content:center;align-items:center;width:100vw;height:100vh;background-color:rgba(0,0,0,0.3);position:fixed;left:0;top:0;">
 																		<div id="dialog" style="width:90%;height:90%;border-radius:15px;background-color:white;" position:relative;>
