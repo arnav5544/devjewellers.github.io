@@ -1758,7 +1758,7 @@ for(s=1;s<=objLength(customer_length);s++){
 	window['invStr'+s]=window['inv'+s].name + '-' +	window['inv'+s].date + '-' + window['inv'+s].invoice_no	+'-' + window['inv'+s].phone													     
 	 window['invStr'+s]= window['invStr'+s].replace(/ /g,'-');
 	 window['invStr'+s]= window['invStr'+s].replace(///g,'-');															     
-	console.log(s+"st"+"Invoice Downloaded");
+	console.log(String(s)+"st"+"Invoice Downloaded");
 	function faker(){get_data(window['inv'+s])}				       
 	window['ctext'+s]='<li class="contents" onclick="faker();" title="'+window['invStr'+s]+'" id="'+window['invStr'+s]+'">'+window['invStr'+s]+'</i>'							       
 								       
