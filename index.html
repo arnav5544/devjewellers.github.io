@@ -1761,7 +1761,7 @@ for(s=1;s<=objLength(customer_length);s++){
 	 window['liElem'+s].class="contents";
 	 window['liElem'+s].title=window['invStr'+s];
 	 window['liElem'+s].id=window['invStr'+s];
-	 window['liElem'+s]				    
+	 window['liElem'+s].addEventListener('click',function(){get_data(window['inv'+s])})				    
 	 window['liElem'+s].innerHTML=window['invStr'+s];						       						       
 	 document.getElementById("clist").appendChild(window['liElem'+s])
 				       });}
