@@ -263,16 +263,16 @@ sub_total:sub_total,
 
 
 
-
+var myData;
 function get_data(id){
  
-var myData;
-
-firebase.database().ref('customers/'+id).on('value', function(snapshot){ myData=snapshot.val(); } );
 
 
+firebase.database().ref('customers/'+id).on('value', function(snapshot){ myData=snapshot.val();console.log("data downloaded") } );
 
 
+
+setTimeout(function (){
 var invoice_no  = document.getElementById("inno")
 var invoice_date = document.getElementById("ind")
 var name = document.getElementById("nam")
@@ -538,6 +538,7 @@ if(myData.given_silver.subg2>0 && myData.given_silver.subt2>0 && myData.given_si
 else{document.getElementById("first").style.display="none"
     document.getElementById("second").style.display="none"
     document.getElementById("third").style.display="none"}
+},5000);
 }
 
 
