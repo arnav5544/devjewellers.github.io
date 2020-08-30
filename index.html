@@ -1757,11 +1757,11 @@ for(s=1;s<=objLength(customer_length);s++){
 	 window['invStr'+s]=window['inv'+s].name + '-' +	window['inv'+s].date + '-' + window['inv'+s].invoice_no	+ '-' + window['inv'+s].phone													     
 	 window['invStr'+s]= window['invStr'+s].replace(/ /g,'-');
 	 window['invStr'+s]= window['invStr'+s].replace("/",'-');															     
-	 window['onclck'+s]=get_data(window['inv'+s]);
 	 window['liElem'+s]=document.createElement("li");
 	 window['liElem'+s].class="contents";
 	 window['liElem'+s].title=window['invStr'+s];
 	 window['liElem'+s].id=window['invStr'+s];
+	 window['liElem'+s].onclick=get_data(window['inv'+s]);				    
 	 window['liElem'+s].innerHTML=window['invStr'+s];						       						       
 	 document.getElementById("clist").appendChild(window['liElem'+s])
 				       });}
