@@ -1751,9 +1751,9 @@ firebase.database().ref('customers').on('value', function(snapshot){
 customer_length=snapshot.val();
 console.log("main data downloaded");
 for(s=1;s<=objLength(customer_length);s++){
-	  document.getElementById("clist").innerHTML=""	;		  
+	 		  
  firebase.database().ref('customers/'+s).on('value', function(snapshot){
-	 														     
+	  document.getElementById("clist").innerHTML="";														     
 	 window['inv'+s]=snapshot.val();
 	 window['invStr'+s]=window['inv'+s].name + '-' +	window['inv'+s].date + '-' + window['inv'+s].invoice_no	+ '-' + window['inv'+s].phone													     
 	 window['invStr'+s]= window['invStr'+s].replace(/ /g,'-');
