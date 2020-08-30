@@ -1806,15 +1806,15 @@ for(s=1;s<=objLength(customer_length);s++){
 					  var saveBool=false
 					  function countSave(){
 					  if (saveBool==false) {
-     			save();
+     			   		save();
 					  saveBool=true
     } else {
     alert("Already Saved")
     }}
     
-			  window.addEventListener("beforeprint", function() {});	
+			  window.addEventListener("beforeprint", function() {document.getElementById("inno").value=Number(document.getElementById("inno").value)-1});	
 							  
-			  window.addEventListener("afterprint", function() {show(document.getElementById("inno").value=Number(document.getElementById("inno").value)-1)});	
+			  window.addEventListener("afterprint", function() {show()});	
 							      function reset(){ let pmpt=confirm("Do You Really Want To Reset?");
 										if(pmpt){window.location.reload()}}
 </script>	
