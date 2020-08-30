@@ -1642,12 +1642,14 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
         </datalist>
         <!--end of main table-->
         <div id="btns" >
+		      <i class="material-icons" style="font-size:48px;color:green" onclick="clickCounter(inno)">add_circle</i>
 	<button onclick="main()">Calculate</button>
             <button style="width:3cm;background-color:dodgerblue;" onclick="opt()">Show More</button>
         
         <button style="width:3cm;background-color:dodgerblue;" onclick="less()">Show less</button>
         <button style="background-color:mediumseagreen;"onclick="pnt()">Print</button>
 	  <button style="background-color:mediumseagreen;"onclick="showCustomers()">Get Data</button></div>
+		<button style="background-color:mediumseagreen;"onclick="save();">Save</button>								   
 		<section id="dialog" style="display:none;justify-content:center;align-items:center;width:100vw;height:100vh;background-color:rgba(0,0,0,0.3);position:fixed;left:0;top:0;">
 																		<div id="dialog" style="width:90%;height:90%;border-radius:15px;background-color:white;" position:relative;>
 														
@@ -1780,6 +1782,21 @@ for(s=1;s<=objLength(customer_length);s++){
     } 
 } 
 					  /*search function end*/
+		
+function clickCounter(text) {
+
+new Audio('click.mp3').play() 
+
+
+
+  if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    text.value=localStorage.clickcount;
+}
+
 					  					  
 </script>	
 </html>
