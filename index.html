@@ -1729,23 +1729,7 @@ function readData(id){firebase.database().ref('customers/'+id).on('value', funct
 															document.body.style.position="initial"
 								    } 
 								    /*dialog close function end*/
-								    /*search function start*/
-								    function searchContent() { 
-    let input = document.getElementById('searchBar').value 
-    input=input.toLowerCase(); 
-    let x = document.getElementsByClassName('contents'); 
-      
-    for (i = 0; i < x.length; i++) {  
-        if (!x[i].innerHTML.toLowerCase().includes(input)) { 
-            x[i].style.display="none"; 
-        } 
-        else { 
-            x[i].style.display="list-item";                  
-        } 
-    } 
-} 
-					  /*search function end*/
-					  
+								   
 		
 firebase.database().ref('customers').on('value', function(snapshot){	
 					  
@@ -1770,12 +1754,30 @@ for(s=1;s<=objLength(customer_length);s++){
 	 window['liElem'+s].style.border="initial"
 	 window['liElem'+s].style.fontSize="initial"
 	 window['liElem'+s].style.margin="10px auto"					    
-	 window['liElem'+s].addEventListener('click',function(){get_data(snapshot.val())})						    
+	 window['liElem'+s].addEventListener('click',function(){get_data(snapshot.val())})
+	 window['liElem'+s].addEventListener('click',function(){this.style.textDecoration="underline"})	
+	 window['liElem'+s].addEventListener('mouseover',function(){this.style.color="BLUEVIOLET"})													     
 	 document.getElementById("clist").appendChild(window['liElem'+s])
 				       });}
 						})			  
 					  
 					  
-					  
+ /*search function start*/
+								    function searchContent() { 
+    let input = document.getElementById('searchBar').value 
+    input=input.toLowerCase(); 
+    let x = document.getElementsByClassName('contents'); 
+      
+    for (i = 0; i < x.length; i++) {  
+        if (!x[i].innerHTML.toLowerCase().includes(input)) { 
+            x[i].style.display="none"; 
+        } 
+        else { 
+            x[i].style.display="list-item";                  
+        } 
+    } 
+} 
+					  /*search function end*/
+					  					  
 </script>	
 </html>
