@@ -1787,6 +1787,8 @@ for(s=1;s<=objLength(customer_length);s++){
     } 
 } 
 					  /*search function end*/
-			  window.addEventListener("afterprint", function() {show()});					  
+			  window.addEventListener("afterprint", function() {show()});	
+							      function reset(){ let pmpt=confirm("Do You Really Want To Reset?");
+										if(pmpt){window.location.reload()}}
 </script>	
 </html>
