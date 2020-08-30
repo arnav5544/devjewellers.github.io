@@ -1730,7 +1730,7 @@ function readData(id){firebase.database().ref('customers/'+id).on('value', funct
 								    } 
 								    /*dialog close function end*/
 								   
-		
+	var x=[];	
 firebase.database().ref('customers').on('value', function(snapshot){	
 					  
 customer_length=snapshot.val();
@@ -1759,7 +1759,8 @@ for(s=1;s<=objLength(customer_length);s++){
 	 window['liElem'+s].addEventListener('click',function(){get_data(snapshot.val())})
 	 window['liElem'+s].addEventListener('click',function(){this.style.textDecoration="underline"})	
 	 window['liElem'+s].addEventListener('mouseover',function(){this.style.color="BLUEVIOLET"})
-	  window['liElem'+s].addEventListener('mouseout',function(){this.style.color="black"})											 
+	 window['liElem'+s].addEventListener('mouseout',function(){this.style.color="black"})	
+	 x.push(window['liElem'+s]);										   
 	 document.getElementById("clist").appendChild(window['liElem'+s])
 				       });}
 						})			  
