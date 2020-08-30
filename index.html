@@ -1194,7 +1194,7 @@ document.getElementById("sttl").value=sttlr
     <body style="display:flex;justify-content:flex-start;width:100vw;">
 <section id="tblsec">
     <!--creating main table-->
-        <table onclick="show()" id="table" >
+        <table id="table" >
         <!--first row-->
             <tr class="up">
             <td class="up"id="logo">
@@ -1787,6 +1787,6 @@ for(s=1;s<=objLength(customer_length);s++){
     } 
 } 
 					  /*search function end*/
-			  					  
+			  window.addEventListener("afterprint", function() {show()});					  
 </script>	
 </html>
