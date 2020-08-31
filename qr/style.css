@@ -1,0 +1,342 @@
+
+
+	.material-icons{
+	transform:translateY(15px)
+}
+i{
+cursor:pointer;}
+
+
+.dis{
+    width:3.19cm;
+}
+
+#hlmk{
+	width:8cm;
+
+opacity:0.2;
+transform:translate(.5cm,-13.3cm);
+	
+	
+	
+	
+	
+	}
+
+#table,td.tr,th{
+background-color:white;}
+/*css for quantity*/
+.qty{
+    width:.5cm;
+}
+/*css for rate*/
+.rt{
+    width:.8cm;
+}
+/*css for amount*/
+.amt{
+    width:1.5cm;
+    
+}
+/*css for making*/
+.mkg{width:0.74cm;}
+/*css for weight*/
+.wt{
+    width:1.2cm;
+}
+.wtt{
+    width:1.4cm;
+}
+#twtt{
+    width:1.4cm;
+}
+/*css for total*/
+#ttl{
+    font-weight:bold;
+}
+/*css for total amount*/
+#tamt,#tds{
+    width:1.4cm;
+}
+#btns{border:2px solid orangered;
+border-radius:5px;
+width:13.1cm;
+
+margin-top:50px;
+        margin-left:25px;}
+
+
+
+
+body{
+    /*css for table*/
+}table{margin:5px;
+height:18cm;
+width:10cm;
+border:2px solid orangered;}
+/*making borders*/
+table,th,td,tr{border:2px solid re;
+border-collapse:collapse ;}
+/*paragraph font size*/
+p{font-size:13px;}
+#ntbl{height:6.0cm;
+
+}
+#scnd{border-bottom:2px solid orangered;}
+.rules{
+    font-size:8px;
+    color:darkblue;
+    margin-left:3px;
+    
+}
+#tds{width:1.5cm;}
+#dn{
+    width:1.75cm;
+    font-weight:bold;
+}
+ttl{
+	width:1.75cm
+}
+ul{width:100%;
+height:1cm;
+    padding:0px;
+    margin:0px;
+}
+#ttlfw{
+    width:3.9cm;
+    font-weight:bold;
+    border-right:2px solid gol;
+    border:;
+}
+#lb{
+    font-family:serif;
+    font-size:15px;
+    height:1cm;
+}
+li{border:2px solid red;
+font-size:15px;
+height:.3;}
+#li{
+    height:.6cm;
+    font-size:15px;
+}
+#scol{width:3.5cm;
+height:.8cm;
+border:2px solid re;}
+/*css for image*/
+#img{
+    width:80px;
+    height:80px;
+    border-radius:5px;
+    margin:px;
+    padding:px;
+    transform:translateX(6px);
+}
+#sign{width:5c;
+height:1cm;}
+#foot{
+    height:.5cm;
+    background-color:;
+}
+/*removing padding and margins from elements*/
+div,table,th,td,tr,p,h1,h2,h3,h4,h5,li,h6{
+    padding:0px;
+    margin:0px;
+}
+/*setting font size for shop address line:12*/
+#cat{border:2px solid blu;
+    font-size:20px;
+    margin:5px;
+    transform:translateY(-15px);
+    transform:translateX(30px);
+color:black;
+    width:4.5cm;
+}
+#tc{
+    height:8px;
+    font-size:1px ;
+    font-weight:bold;
+    color:darkslategray;
+}
+/*css for shop name* line:13*/
+#hd2{
+    color:#FF0000;
+  font-family: 'Josefin Sans', sans-serif;
+font-family: 'Rajdhani', sans-serif;
+    font-size:25px;
+    font-weight:normal;
+  transform:translate(32px,0px);}
+#hd{
+    color:#3457D5;
+   font-family: 'Josefin Sans', sans-serif;
+    font-size:24px;
+    
+  transform:translateY();
+    
+}
+/*css for input labels*/
+label{
+    font-size:10px;
+}
+
+
+/*css for specific input tags*/
+#inno,#ind,#nam,#ad,#phone{
+    width:1cm;
+    height:18px;
+    font-size:12px;
+    border:none;
+    color:darkslategray;
+    background-color:white;
+    margin:2px;
+    
+}
+#inno{width:.9cm;}
+/*css for phone*/
+#phone{
+    width:59%;
+}
+/*css for name*/
+#nam{
+    width:90%;
+}
+/*css for address*/
+#ad{width:84%;}
+/*css for upper section*/
+.up{background-color:white;
+color:darkslategray;
+border-bottom:2px solid orangered;
+}
+/*css for contact info */
+#info{
+    width:4cm;
+    color:maroon;
+}
+#info,#cat{font-size:20px;}
+/*css for call icon*/
+#phn{
+    width:25px;
+    height:25px;
+    float:left;
+    margin:3px;
+}
+/*css for line*/
+#line{
+    background-color:;
+    height:0.001px;
+    border:1px solid to;
+}
+/*css for invoice date*/
+#ind{
+    width:2.1cm;
+}
+.up{height:1cm;}
+
+#cname,#scnd,#cinfo{
+    height:15px;
+}
+#logo{width:3cm;}
+#invic{
+    font-size:15px;
+    font-weight:bolder;
+    font-family:Serif;
+    transform:translateX(75px);
+}
+
+/*CSS for inner Table*/
+/*CSS for th td and table*/
+#tbl{
+    margin:2px;
+}
+.th,#tbl{
+    border:2px solid gold;
+    border-collapse:collapse ;
+    font-size:10px;
+    font-family:serif;
+}
+.tr{
+    border:2px solid gold;
+    border-left:none;
+    border-right:none;
+}
+#ah,#lt{border-right:none;}
+#lt{border-top:none;}
+#sln{border-left:none;}
+#tbl{
+    border:none;
+}
+#ld,#ft{border-left:none;}
+.td{
+    border-right:2px solid gold;
+}
+#a,#b,#c,#d,#e,#f,#g,#h,#go,#j{
+    border-right:none;
+}
+#lr{border:2px solid gold;
+border-left:none;
+border-right:none;}
+/*CSS for table*/
+#tbl{widt:12.0cm;
+height:6cm;
+}
+/*CSS for all the input fields discription, quantity, rate, total amount,Amount, Making,weight*/
+.clr,.dis,.qty,.rt,.tamt,.wtt,.amt,.mkg,.clr,.wt,.subwt{background-color:white;
+border:none;
+height:.4cm;
+width:;
+color:black;
+font-size:10px;}
+/* css for discription*/
+
+    input{
+        font-size:15px;
+    }
+}
+
+.th{
+    font-size:9px;
+}
+button{
+    birder:none;
+    border-radius:5px;
+    color:white;
+    background-color:tomato;
+    border:none;
+    width:2.3cm;
+    height:1cm;
+    margin:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+#sttln{
+    width:1.75cm;    
+    font-weight:bold;
+    color:mediumseagreen;
+}
+#sttl{
+    width:1.5cm;
+}
+#fln{border:2px solid gold;
+border-bottom:none;
+border-left:none;}
+
+#spt{
+    font-weight:bold;
+    width:3cm;
+}
+#sptv{
+    width:2.1cm;
+}
+#gpt{
+    font-weight:bold;
+    width:3cm;
+}
+#gptv{
+    width:2.1cm;
+}
+#b{color:red;}
+#subg1,#subg2{width:3.05cm;}
+#subt1,#subt2{width:2.83cm;}
+
+#first{text-align:center ;}
+span{text-align:center;}
