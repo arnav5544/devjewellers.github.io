@@ -1,6 +1,10 @@
 <!doctype HTML>
 <head>
-	<style>*{font-family:sans-serif;}
+	<style>
+		body{display:flex;
+		justify-content:center;
+		align-items:center;}
+		*{font-family:sans-serif;}
 		button{
 		border:none;
 		background-color:blue;
@@ -19,7 +23,7 @@
 </head>
 <body>
 
-<div style="width: 500px" id="reader"></div>
+<div style="width:auto" id="reader"></div>
 <script>
 function onScanSuccess(qrCodeMessage) {
 	// handle on success condition with the decoded message
