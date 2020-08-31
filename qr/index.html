@@ -393,6 +393,12 @@ var html5QrcodeScanner = new Html5QrcodeScanner(
 function onScanSuccess(qrCodeMessage) {
     // handle on success condition with the decoded message
 console.log(qrCodeMessage);
+	var invoiceNumber=Number(qrCodeMessage.replace("DEV-JEWELLERS-",""))
+						       
+ firebase.database().ref('customers/'+invoiceNumber).on('value', function(snapshot){
+ console.log("Invoice Retrived!") ;
+	 get_data(snapshot.val);
+ }
     html5QrcodeScanner.clear();
     // ^ this will stop the scanner (video feed) and clear the scan area.
 }
@@ -400,12 +406,18 @@ console.log(qrCodeMessage);
 html5QrcodeScanner.render(onScanSuccess);
 function onScanSuccess(qrCodeMessage) {
 console.log(qrCodeMessage);
+	var invoiceNumber=Number(qrCodeMessage.replace("DEV-JEWELLERS-",""))
+						       
+ firebase.database().ref('customers/'+invoiceNumber).on('value', function(snapshot){
+ console.log("Invoice Retrived!") ;
+	 get_data(snapshot.val);
+ }
     // handle on success condition with the decoded message
 }
 
 function onScanError(errorMessage) {
     // handle on error condition, with error message
-console.log(errorMessage);
+
 }
 
 var html5QrcodeScanner = new Html5QrcodeScanner(
@@ -427,4 +439,5 @@ html5QrcodeScanner.render(onScanSuccess, onScanError);
 		})
 		
 	</script>
+	<script src="script.js"></script>
 </body>
