@@ -432,9 +432,9 @@ console.log(qrCodeMessage);
 						       
  firebase.database().ref('customers/'+invoiceNumber).on('value', function(snapshot){
  console.log("Invoice Retrived!") ;
-	 get_data(snapshot.val);
+	 get_data(snapshot.val());
 	  document.getElementById("invoice").style.display="block"
-	 document.body.style.alignItems="initial"
+	 document.body.style.alignItems="none"
  })
     html5QrcodeScanner.clear();
     // ^ this will stop the scanner (video feed) and clear the scan area.
@@ -450,7 +450,7 @@ console.log(qrCodeMessage);
 	 console.log(snapshot.val())
  console.log("Invoice Retrived!") ;
 	 get_data(snapshot.val());
-	 	 document.body.style.alignItems="initial"
+	 	 document.body.style.alignItems="none"
 	 document.getElementById("invoice").style.display="block"
 	 
  })
