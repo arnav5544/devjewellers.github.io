@@ -360,6 +360,7 @@ span{text-align:center;}
 </style>
 
     <script>function main(){
+		    new Audio('click.mp3').play() 
 //writing Date function for invoice date
     var d= new Date();
 var yy=d.getFullYear();
@@ -373,10 +374,12 @@ calculate()
 calculate ()
 }
 function show(){
+	
     document.getElementById("btns").style.display="initial"
 	
 }
 function pnt(){
+	new Audio('click.mp3').play() 
      document.getElementById("btns").style.display="none"
 
      window.print()
@@ -386,6 +389,7 @@ function pnt(){
 
 
 function opt(){
+	new Audio('click.mp3').play() 
     document.getElementById("first").style.display="table-row"
     document.getElementById("second").style.display="table-row"
     
@@ -395,6 +399,7 @@ document.getElementById("third").style.display="table-row"
 }
 
 function less(){
+	new Audio('click.mp3').play() 
     document.getElementById("first").style.display="none"
     document.getElementById("second").style.display="none"
     
@@ -1740,6 +1745,7 @@ function readData(id){firebase.database().ref('customers/'+id).on('value', funct
 		/*database functions end*/
 				 /*dialog show function start*/
 	function showCustomers(){
+				 new Audio('click.mp3').play(); 
 				var dialog= document.getElementById("dialog") 
 				 dialog.style.display="flex"
 				document.body.style.position="fixed"
@@ -1748,6 +1754,7 @@ function readData(id){firebase.database().ref('customers/'+id).on('value', funct
 				/*dialog show function end*/
 								    /*dialog close function start*/
 								  function dialogClose(){
+								    new Audio('click.mp3').play() ;
 								    document.getElementById("dialog").style.display="none";
 															document.body.style.position="initial"
 								    } 
@@ -1827,7 +1834,8 @@ for(s=1;s<=objLength(customer_length);s++){
 			
 			 window.addEventListener("beforeprint", function() { document.getElementById("btns").style.display="none"});					  
 			  window.addEventListener("afterprint", function() {show()});	
-							      function reset(){ let pmpt=confirm("Do You Really Want To Reset?");
+							      function reset(){ new Audio('click.mp3').play() ;
+							      let pmpt=confirm("Do You Really Want To Reset?");
 										if(pmpt){window.location.reload()}}
 </script>
 															       
