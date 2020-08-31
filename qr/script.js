@@ -254,3 +254,4 @@ silver_rate.value= myData.rate.silver_rate
 gold_rate.value= myData.rate.gold_rate 
 
 sub_total.value= myData.sub_total 
+}
