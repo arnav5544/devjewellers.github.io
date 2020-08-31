@@ -1,5 +1,6 @@
 <!doctype HTML>
 <head>
+	<link href="style.css" rel="stylesheet"/>
 	<style>
 		body{width:100vw;
 			height:100vh;
@@ -370,16 +371,25 @@
             </tr>
             <tr id="sin">
                 <td style="padding:0px;&quot;"><p style="margin:0px;padding:0px;float:left;margin-top:0px;
-transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b></p><br><p style="font-size:11px;transform:translate(10px,-.5cm);">सामान तैयारी पाया</p></td>
+transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b></p><br></td>
                 <td></td>
-                <td id="sign"><p><b>Signature:</b></p><p style="font-size:11px;">सामान तैयारी दिया</p><p></p>      <div id="scol"></div>
+                <td id="sign"><p><b>Signature:</b></p><p style="font-size:11px;">Product Given</p><p></p>      <div id="scol"></div>
                 </td>
             </tr>
             
         </tbody></table>
 <p style="font-size:10px;float:left;margin-left:5px;">© Dev Jewellers</p>
+		<div id="btns">
+			<button onclick="function(){window.print();}">Print</button>
+			<button onclick="scanOther()">Scan Another Qr</button>
+		</div>
 	</div>
 <script>
+	function scanOther(){
+	document.getElementById("reader").style.display="block";
+		document.getElementById("invoice").style.display="none"
+	
+	}
 function onScanSuccess(qrCodeMessage) {
 	// handle on success condition with the decoded message
 }
@@ -392,12 +402,14 @@ var html5QrcodeScanner = new Html5QrcodeScanner(
         
 function onScanSuccess(qrCodeMessage) {
     // handle on success condition with the decoded message
+	document.getElementById("reader").style.display="none";
 console.log(qrCodeMessage);
 	var invoiceNumber=Number(qrCodeMessage.replace("DEV-JEWELLERS-",""))
 						       
  firebase.database().ref('customers/'+invoiceNumber).on('value', function(snapshot){
  console.log("Invoice Retrived!") ;
 	 get_data(snapshot.val);
+	  document.getElementById("invoice").style.display="block"
  }
     html5QrcodeScanner.clear();
     // ^ this will stop the scanner (video feed) and clear the scan area.
@@ -405,12 +417,14 @@ console.log(qrCodeMessage);
 
 html5QrcodeScanner.render(onScanSuccess);
 function onScanSuccess(qrCodeMessage) {
+	document.getElementById("reader").style.display="none";
 console.log(qrCodeMessage);
 	var invoiceNumber=Number(qrCodeMessage.replace("DEV-JEWELLERS-",""))
 						       
  firebase.database().ref('customers/'+invoiceNumber).on('value', function(snapshot){
  console.log("Invoice Retrived!") ;
 	 get_data(snapshot.val);
+	 document.getElementById("invoice").style.display="block"
  }
     // handle on success condition with the decoded message
 }
