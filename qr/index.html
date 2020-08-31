@@ -384,7 +384,30 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
 			<button class="button" style="width:3.5cm;background-color:blue;" onclick="scanOther()">Scan Another Qr</button>
 		</div>
 	</div>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+							   
 <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCUxrHCbYxcEmiCy56gHzOgbP2c8RVrCAY",
+    authDomain: "dev-jewellers-invoice.firebaseapp.com",
+    databaseURL: "https://dev-jewellers-invoice.firebaseio.com",
+    projectId: "dev-jewellers-invoice",
+    storageBucket: "dev-jewellers-invoice.appspot.com",
+    messagingSenderId: "678678089968",
+    appId: "1:678678089968:web:bc23a7c1975237ce14f235",
+    measurementId: "G-Y4KEB1LNVM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+var database = firebase.database();
+	</script>
+<script>
+	
 	function scanOther(){
 		document.body.alignItems="center"
 	document.getElementById("reader").style.display="block";
