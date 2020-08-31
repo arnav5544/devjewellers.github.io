@@ -380,7 +380,7 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
         </tbody></table>
 <p style="font-size:10px;float:left;margin-left:5px;">© Dev Jewellers</p>
 		<div id="btns">
-			<button class="button" onclick="function(){window.print();}">Print</button>
+			<button class="button" onclick="pnt()">Print</button>
 			<button class="button" style="width:3.5cm;background-color:blue;" onclick="scanOther()">Scan Another Qr</button>
 		</div>
 	</div>
@@ -407,7 +407,7 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
 var database = firebase.database();
 	</script>
 <script>
-	
+	function pnt(){window.print();}
 	function scanOther(){
 		document.body.alignItems="center"
 	document.getElementById("reader").style.display="block";
@@ -445,7 +445,7 @@ function onScanSuccess(qrCodeMessage) {
 	document.getElementById("reader").style.display="none";
 console.log(qrCodeMessage);
 	var invoiceNumber=Number(qrCodeMessage.replace("DEV-JEWELLERS-",""))
-		console.log(invoiceNumber)				       
+						       
  firebase.database().ref('customers/'+invoiceNumber).on('value', function(snapshot){
 	 console.log(snapshot.val())
  console.log("Invoice Retrived!") ;
