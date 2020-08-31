@@ -410,7 +410,7 @@ console.log(qrCodeMessage);
  console.log("Invoice Retrived!") ;
 	 get_data(snapshot.val);
 	  document.getElementById("invoice").style.display="block"
- }
+ })
     html5QrcodeScanner.clear();
     // ^ this will stop the scanner (video feed) and clear the scan area.
 }
@@ -425,7 +425,7 @@ console.log(qrCodeMessage);
  console.log("Invoice Retrived!") ;
 	 get_data(snapshot.val);
 	 document.getElementById("invoice").style.display="block"
- }
+ })
     // handle on success condition with the decoded message
 }
 
