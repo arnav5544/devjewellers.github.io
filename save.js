@@ -523,16 +523,12 @@ gold_rate.value= myData.rate.gold_rate
 
 sub_total.value= myData.sub_total 
 
-if(myData.given_gold.subg1>0 && myData.given_gold.subt1>0 && myData.given_gold.subrs1>0){
+if(myData.given_gold.subg1.length>0 && myData.given_gold.subt1.length>0 && myData.given_gold.subrs1.length>0){
     document.getElementById("first").style.display="table-row"
     document.getElementById("second").style.display="table-row"
     document.getElementById("third").style.display="table-row"
 }
-else{document.getElementById("first").style.display="none"
-    document.getElementById("second").style.display="none"
-    document.getElementById("third").style.display="none"}
-
-if(myData.given_silver.subg2>0 && myData.given_silver.subt2>0 && myData.given_silver.subrs2>0){
+else if(myData.given_silver.subg2.length>0 && myData.given_silver.subt2.length>0 && myData.given_silver.subrs2.length>0){
     document.getElementById("first").style.display="table-row"
     document.getElementById("second").style.display="table-row"
     document.getElementById("third").style.display="table-row"
