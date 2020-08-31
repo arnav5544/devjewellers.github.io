@@ -1,0 +1,43 @@
+<!doctype HTML>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://blog.minhazav.dev/assets/research/html5qrcode/html5-qrcode.min.js"></script>
+</head>
+<body>
+
+<div style="width: 500px" id="reader"></div>
+<script>
+function onScanSuccess(qrCodeMessage) {
+	// handle on success condition with the decoded message
+}
+
+var html5QrcodeScanner = new Html5QrcodeScanner(
+	"reader", { fps: 10, qrbox: 250 });
+html5QrcodeScanner.render(onScanSuccess);
+var html5QrcodeScanner = new Html5QrcodeScanner(
+    "reader", { fps: 10, qrbox: 250 });
+        
+function onScanSuccess(qrCodeMessage) {
+    // handle on success condition with the decoded message
+console.log(qrCodeMessage);
+    html5QrcodeScanner.clear();
+    // ^ this will stop the scanner (video feed) and clear the scan area.
+}
+
+html5QrcodeScanner.render(onScanSuccess);
+function onScanSuccess(qrCodeMessage) {
+console.log(qrCodeMessage);
+    // handle on success condition with the decoded message
+}
+
+function onScanError(errorMessage) {
+    // handle on error condition, with error message
+console.log(errorMessage);
+}
+
+var html5QrcodeScanner = new Html5QrcodeScanner(
+    "reader", { fps: 10, qrbox: 250 });
+html5QrcodeScanner.render(onScanSuccess, onScanError);
+</script>
+
+
+</body>
