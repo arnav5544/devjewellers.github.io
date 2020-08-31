@@ -449,7 +449,7 @@ console.log(qrCodeMessage);
  firebase.database().ref('customers/'+invoiceNumber).on('value', function(snapshot){
 	 console.log(snapshot.val())
  console.log("Invoice Retrived!") ;
-	 get_data(snapshot.val);
+	 get_data(snapshot.val());
 	 	 document.body.style.alignItems="initial"
 	 document.getElementById("invoice").style.display="block"
 	 
