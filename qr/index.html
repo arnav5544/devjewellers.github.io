@@ -61,10 +61,15 @@ html5QrcodeScanner.render(onScanSuccess, onScanError);
 	<script>
 	document.getElementsByTagName("span")[0].innerHTML="Dev Jewellers Qr"
 	document.getElementsByTagName("span")[1].borderRadius="3px"
+		document.getElementsByTagName("button")[0].addEventListener('click',function (){  
+		
 		var cmras=document.getElementById("reader__camera_selection").options
 		if(cmras.length>1){
 		cmras[1].selected=true;
 		
 		}
+		
+		})
+		
 	</script>
 </body>
