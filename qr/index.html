@@ -455,7 +455,8 @@ html5QrcodeScanner.render(onScanSuccess, onScanError);
 		}
 		},2000);
 		})
-		
+		 window.addEventListener("beforeprint", function() { document.getElementById("btns").style.display="none"});					  
+			
 	</script>
 	<script src="script.js"></script>
 </body>
