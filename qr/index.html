@@ -406,7 +406,7 @@ function onScanSuccess(qrCodeMessage) {
 	document.getElementById("reader").style.display="none";
 console.log(qrCodeMessage);
 	var invoiceNumber=Number(qrCodeMessage.replace("DEV-JEWELLERS-",""))
-			console.log(invoiceNumber)			       
+						       
  firebase.database().ref('customers/'+invoiceNumber).on('value', function(snapshot){
  console.log("Invoice Retrived!") ;
 	 get_data(snapshot.val);
@@ -422,7 +422,7 @@ function onScanSuccess(qrCodeMessage) {
 	document.getElementById("reader").style.display="none";
 console.log(qrCodeMessage);
 	var invoiceNumber=Number(qrCodeMessage.replace("DEV-JEWELLERS-",""))
-						       
+		console.log(invoiceNumber)				       
  firebase.database().ref('customers/'+invoiceNumber).on('value', function(snapshot){
  console.log("Invoice Retrived!") ;
 	 get_data(snapshot.val);
