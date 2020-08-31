@@ -1,5 +1,14 @@
 <!doctype HTML>
 <head>
+	<style>*{font-family:sans-serif;}
+		button{
+		border:none;
+		background-color:green;
+			border-radius:3px;
+		}
+	
+	
+	</style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://blog.minhazav.dev/assets/research/html5qrcode/html5-qrcode.min.js"></script>
 </head>
 <body>
@@ -39,5 +48,8 @@ var html5QrcodeScanner = new Html5QrcodeScanner(
 html5QrcodeScanner.render(onScanSuccess, onScanError);
 </script>
 
-
+	<script>
+	document.getElementsByTagName("span")[0].innerHTML="Dev Jewellers Qr"
+	document.getElementsByTagName("span")[1].borderRadius="3px"
+	</script>
 </body>
