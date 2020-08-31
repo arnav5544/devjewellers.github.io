@@ -1823,7 +1823,7 @@ for(s=1;s<=objLength(customer_length);s++){
 			}
     
 			
-			 window.addEventListener("afterprint", function() { document.getElementById("btns").style.display="none"});					  
+			 window.addEventListener("beforeprint", function() { document.getElementById("btns").style.display="none"});					  
 			  window.addEventListener("afterprint", function() {show()});	
 							      function reset(){ let pmpt=confirm("Do You Really Want To Reset?");
 										if(pmpt){window.location.reload()}}
