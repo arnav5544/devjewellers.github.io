@@ -380,8 +380,8 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
         </tbody></table>
 <p style="font-size:10px;float:left;margin-left:5px;">© Dev Jewellers</p>
 		<div id="btns">
-			<button onclick="function(){window.print();}">Print</button>
-			<button onclick="scanOther()">Scan Another Qr</button>
+			<button class="button" onclick="function(){window.print();}">Print</button>
+			<button class="button" onclick="scanOther()">Scan Another Qr</button>
 		</div>
 	</div>
 <script>
@@ -410,6 +410,7 @@ console.log(qrCodeMessage);
  console.log("Invoice Retrived!") ;
 	 get_data(snapshot.val);
 	  document.getElementById("invoice").style.display="block"
+	 document.body.style.alignItems="initial"
  })
     html5QrcodeScanner.clear();
     // ^ this will stop the scanner (video feed) and clear the scan area.
@@ -424,7 +425,9 @@ console.log(qrCodeMessage);
  firebase.database().ref('customers/'+invoiceNumber).on('value', function(snapshot){
  console.log("Invoice Retrived!") ;
 	 get_data(snapshot.val);
+	 	 document.body.style.alignItems="initial"
 	 document.getElementById("invoice").style.display="block"
+	 
  })
     // handle on success condition with the decoded message
 }
