@@ -1763,7 +1763,8 @@ document.getElementById("inno").value="1"
 document.getElementById("inno").value=(parseInt(objLength(customer_length))+1)
 			}      
 console.log("main data downloaded");
-  document.getElementById("clist").innerHTML="";				  
+  document.getElementById("clist").innerHTML="";
+if(!(customer_length==null)){					       
 for(s=1;s<=objLength(customer_length);s++){
 	
 						       
@@ -1793,7 +1794,7 @@ for(s=1;s<=objLength(customer_length);s++){
 	 document.getElementById("clist").appendChild(window['liElem'+s])
 				       });}
 						})			  
-					  
+					  		}
 					  
  /*search function start*/
 								    function searchContent() { 
