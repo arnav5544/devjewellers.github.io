@@ -2,7 +2,7 @@ self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('arnav5544').then(function(cache) {
      return cache.addAll([
-       'https://adevjewellers.github.io',
+       'https://devjewellers.github.io',
        'index.html',
        'script.js',
 
