@@ -432,7 +432,7 @@ new Audio('/click.mp3').play()
     // handle on success condition with the decoded message
 	document.getElementById("reader").style.display="none";
 console.log(qrCodeMessage);
-	var invoiceNumber=Number(qrCodeMessage.replace("DEV-JEWELLERS-",""))
+	var invoiceNumber=Number(qrCodeMessage.replace("https://devjewellers.github.io/invoice/?dev-jewellers-",""))
 						       
  firebase.database().ref('customers/'+invoiceNumber).on('value', function(snapshot){
  console.log("Invoice Retrived!") ;
@@ -449,7 +449,7 @@ function onScanSuccess(qrCodeMessage) {
 new Audio('/click.mp3').play()
 	document.getElementById("reader").style.display="none";
 console.log(qrCodeMessage);
-	var invoiceNumber=Number(qrCodeMessage.replace("DEV-JEWELLERS-",""))
+	var invoiceNumber=Number(qrCodeMessage.replace("https://devjewellers.github.io/invoice/?dev-jewellers-",""))
 						       
  firebase.database().ref('customers/'+invoiceNumber).on('value', function(snapshot){
 	 console.log(snapshot.val())
