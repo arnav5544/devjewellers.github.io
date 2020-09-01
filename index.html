@@ -3,7 +3,7 @@
 <html>
     <head>
 	    <link rel="manifest" href="devjewellers.webmanifest">
-	    <script src="script.js"></script>
+	    <script src=""></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	    <style>.material-icons,i{
 		    font-size:35px;
@@ -1677,7 +1677,7 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
         <button style="background-color:green;"onclick="pnt()">Print</button>
 	<button style="background-color:dodgerblue;" onclick="opt()">Old Metal</button>						      
 	<button style="background-color:dodgerblue;" onclick="less()">Show less</button>
-	<button style="background-color:dodgerblue;" onclick="share()">Share</button>							     
+	<a id="sharea"><button style="background-color:dodgerblue;" onclick="share()">Share</button></a>							     
 	<button style="background-color:mediumseagreen;"onclick="showCustomers()">Get Data</button>	
 	<button style="background-color:red;"onclick="reset()">Reset</button>
 	<button style="background-color:magenta;" class="add-button">Add To Home</button>						      
@@ -1844,6 +1844,17 @@ for(s=1;s<=objLength(customer_length);s++){
 							      function reset(){ new Audio('click.mp3').play() ;
 							      let pmpt=confirm("Do You Really Want To Reset?");
 										if(pmpt){window.location.reload()}}
+													     
+													     
+			function share(){
+				var sharea=document.getElementById("sharea")									     
+				sharea.href="https://api.whatsapp.com/send?phone=91"+document.getElementById("phone").value+"&text=Thanks For Purchasing at Dev Jewellers. \n To View Your Invoice Click on The Link👉https://devjewellers.github.io/invoice/?dev-jewellers-"+document.getElementById("inno").value;								     
+													     
+													     
+													     }										     
+													     
+													     
+													     
 </script>
 	<script>
 	
