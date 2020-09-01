@@ -703,8 +703,8 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
             
         </tbody></table>
 <p style="font-size:10px;float:left;margin-left:5px;">© Dev Jewellers</p>
-	 <div id="btns">
-		 <button onclick="pnt()">Print</button>
+	 <div id="btns" style="border:none;">
+		 <button class="button" onclick="pnt()">Print</button>
 	 
 	 </div>
 	
@@ -713,8 +713,7 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
    
      	<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
-
-		<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
 							   
 <script>
   // Your web app's Firebase configuration
@@ -735,8 +734,19 @@ var database = firebase.database();
 	</script>
 	  
 	   <script>
+		   if(window.location.includes("?dev-jewellers-")){
+		   document.getElementById("invoice").style.display="block";
+		   
+		   
+		   
+		   }
+		   else{
+		   document.write("<h1 style='color:red;'>Error 404!</h1><h2 style='color:red;'>Not Found!</h2>")
+		   
+		   }
+		   function pnt(){window.print();}
 		    window.addEventListener("beforeprint", function() { document.getElementById("btns").style.display="none"});					  
-			  window.addEventListener("afterprint", function() {document.getElementById("btns").style.display="initial"});	
+		    window.addEventListener("afterprint", function() {document.getElementById("btns").style.display="block"});	
 function get_data(myData){
  
 
