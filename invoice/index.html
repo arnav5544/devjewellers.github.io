@@ -735,6 +735,8 @@ var database = firebase.database();
 	  
 	   <script>
 		   if(window.location.href.includes("?dev-jewellers-")){
+			   var hrefNumber=window.location.href.replace("https://devjewellers.github.io/invoice/?dev-jewellers-","");
+			   console.log(hrefNumber)
 		   document.getElementById("invoice").style.display="block";
 		   
 		   
