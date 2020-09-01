@@ -737,10 +737,11 @@ var database = firebase.database();
 		   if(window.location.search.includes("?dev-jewellers-")){
 			   var searchNumber=window.location.search.replace("?dev-jewellers-","");
 			   console.log(searchNumber)
-			database.ref('customers/'+searchNumber).on('value', function(snapshot){get_data(snapshot.val());}).catch((err)=>document.write("<h1 style='color:red;'>Error 404!</h1><h2 style='color:red;'>Not Found!</h2>"))
+			database.ref('customers/'+searchNumber).on('value', function(snapshot){get_data(snapshot.val());})
+			
 		   document.getElementById("invoice").style.display="block";
-		   
-		   
+		   try{database.ref('customers/'+searchNumber).on('value', function(snapshot){get_data(snapshot.val());})}
+		   catch{   document.write("<h1 style='color:red;'>Error 404!</h1><h2 style='color:red;'>Not Found!</h2>")}
 		   
 		   }
 		   else{
