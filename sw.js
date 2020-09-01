@@ -5,9 +5,16 @@ self.addEventListener('install', function(e) {
        'https://adevjewellers.github.io',
        'index.html',
        'script.js',
-       'style.css',
+
        'devjewellers512.png',
 'devjewellers.webmanifest',
+      'save.js',
+      'whatsapp.png',
+      'favicon1.ico',
+      'favicon.ico',
+      'devjewellers.jpg',
+      'click.mp3',
+      'android-chrome-512x512.ico',
      ]);
    })
  );
