@@ -1,0 +1,17 @@
+{
+  "name": "Dev Jewellers",
+  "short_name": "Dev Jewellers",
+  "description": "Invoice Making Website for Dev Jewellers ",
+  "icons": [
+   
+    {
+      "src": "devjewellers512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://devjewellers.github.io/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#6633ff"
+}
