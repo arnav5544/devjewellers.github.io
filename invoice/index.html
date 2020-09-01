@@ -740,8 +740,7 @@ var database = firebase.database();
 			database.ref('customers/'+searchNumber).on('value', function(snapshot){get_data(snapshot.val());})
 			
 		   document.getElementById("invoice").style.display="block";
-		   catch{   document.write("<h1 style='color:red;'>Error 404!</h1><h2 style='color:red;'>Not Found!</h2>")}
-		   
+		
 		   }
 		   else{
 		   document.write("<h1 style='color:red;'>Error 404!</h1><h2 style='color:red;'>Not Found!</h2>")
