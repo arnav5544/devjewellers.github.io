@@ -735,8 +735,9 @@ var database = firebase.database();
 	  
 	   <script>
 		   if(window.location.search.includes("?dev-jewellers-")){
-			   var hrefNumber=window.location.search.replace("?dev-jewellers-","");
+			   var searchNumber=window.location.search.replace("?dev-jewellers-","");
 			   console.log(hrefNumber)
+			database.ref('customers/'+searchNumber).on('value', function(snapshot){get_data(snapshot.val());});
 		   document.getElementById("invoice").style.display="block";
 		   
 		   
