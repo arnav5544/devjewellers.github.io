@@ -376,7 +376,7 @@ document.getElementById("ind").value=date
 calculate()
 calculate ()
 	var qr=document.getElementById("qrImg")
-	qr.src="https://chart.googleapis.com/chart?chs=55x55&cht=qr&choe=UTF-8&chld=l|0&chl=https://devjewellers.github.io/invoice/?dev-jewellers-"+document.getElementById("inno").value;
+	qr.src="https://chart.googleapis.com/chart?chs=500x500&cht=qr&choe=UTF-8&chld=l|0&chl=https://devjewellers.github.io/invoice/?dev-jewellers-"+document.getElementById("inno").value;
 }
 function show(){
 	
@@ -1563,7 +1563,7 @@ document.getElementById("sttl").value=sttlr
             <tr id="sin">
                 <td style=padding:0px;"><p style="margin:0px;padding:0px;float:left;margin-top:0px;
 transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b></td>
-                <td><img id="qrImg"></td>
+                <td><img id="qrImg" style="width: 50px;height: 50px;"></td>
                 <td  id="sign"><p><b>Signature:</b><p style="font-size:11px;">Product Given</p></p>      <div id="scol"></div>
                 </td>
             </tr>
