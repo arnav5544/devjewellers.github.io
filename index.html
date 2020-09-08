@@ -363,23 +363,29 @@ span{text-align:center;}
 
 </style>
 
-    <script>function main(){
-		    new Audio('click.mp3').play() 
-//writing Date function for invoice date
+    <script>
+	    //writing Date function for invoice date
     var d= new Date();
 var yy=d.getFullYear();
 var mm=d.getMonth()+1;
 var dd=d.getDate();
 var date=dd+"/"+mm+"/"+yy;
-document.getElementById("ind").value=date
+document.getElementById("ind").value=date;
+	    function main(){
+		   
+
 //end of function 
-var invoiceNo= document.getElementById("inno")
+		    
+var invoiceNo= document.getElementById("inno");
+
 if(invoiceNo.value==""){
+	
 alert("Please Fill Invoice No!")
 invoiceNo.style.backgroundColor="red"
 invoiceNo.style.outline="5px solid blue"	
 }
 else{
+new Audio('click.mp3').play(); 
 calculate()
 calculate ()
 	var qr=document.getElementById("qrImg")
