@@ -1790,7 +1790,7 @@ function readData(id){firebase.database().ref('customers/'+id).on('value', funct
 															document.body.style.position="initial"
 								    } 
 								    /*dialog close function end*/
-								   
+								 var saveBool=false   
 	var x=[];	
 firebase.database().ref('customers').on('value', function(snapshot){	
 					  
@@ -1827,7 +1827,7 @@ for(s=1;s<=objLength(customer_length);s++){
 	 window['liElem'+s].style.fontStyle="sans-serif"					  
 	 window['liElem'+s].addEventListener('click',function(){dialogClose()})
 	 window['liElem'+s].addEventListener('click',function(){get_data(snapshot.val())})
-	 window['liElem'+s].addEventListener('click',function(){this.style.textDecoration="underline"})	
+	 window['liElem'+s].addEventListener('click',function(){this.style.textDecoration="underline"; saveBool=false;})	
 	 window['liElem'+s].addEventListener('mouseover',function(){this.style.color="BLUEVIOLET"})
 	 window['liElem'+s].addEventListener('mouseout',function(){this.style.color="black"})	
 	 x.push(window['liElem'+s]);										   
@@ -1858,7 +1858,7 @@ for(s=1;s<=objLength(customer_length);s++){
 					  
 					   var invoiceNo= document.getElementById("inno")
 											
-					  var saveBool=false
+					 
 					  function countSave(){
 if(invoiceNo.value==""){
 alert("Please Fill Invoice No!")
