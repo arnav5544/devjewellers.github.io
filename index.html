@@ -1851,15 +1851,11 @@ invoiceNo.style.outline="5px solid blue"
 }
 					else{			
 					  if (saveBool==false) {
-					 
-
-     			   		save();
-									alert("Data Saved Successfully!")
+					 save();
+					alert("Data Saved Successfully!")
 					document.getElementById("inno").value=Number(document.getElementById("inno").value)-1
-					  saveBool=true
-    } else {
-    alert("Already Saved")
-    }
+					  saveBool=true } 
+	else {alert("Already Saved")}
 		}
 			}
     
