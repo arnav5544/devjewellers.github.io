@@ -1803,7 +1803,8 @@ document.getElementById("inno").value=(parseInt(objLength(customer_length))+1)
 			}      
 console.log("main data downloaded");
   document.getElementById("clist").innerHTML="";
-if(!(customer_length==null)){					       
+if(customer_length==null){console.log("No customers!")}
+else{					       
 for(s=1;s<=objLength(customer_length);s++){
 	
 						       
