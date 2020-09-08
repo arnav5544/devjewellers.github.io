@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     
-
+  #nam,#ad,.dis{ text-transform: uppercase;}
 	.material-icons{
 	transform:translateY(15px)
 }
@@ -1013,6 +1013,24 @@ silver_rate.value= myData.rate.silver_rate
 gold_rate.value= myData.rate.gold_rate 
 
 sub_total.value= myData.sub_total 
+	
+
+if(myData.given_gold.subg1.length>0 && myData.given_gold.subt1.length>0 && myData.given_gold.subrs1.length>0){
+    document.getElementById("first").style.display="table-row"
+    document.getElementById("second").style.display="table-row"
+    document.getElementById("third").style.display="table-row"
+}
+else if(myData.given_silver.subg2.length>0 && myData.given_silver.subt2.length>0 && myData.given_silver.subrs2.length>0){
+    document.getElementById("first").style.display="table-row"
+    document.getElementById("second").style.display="table-row"
+    document.getElementById("third").style.display="table-row"
+}
+else{document.getElementById("first").style.display="none"
+    document.getElementById("second").style.display="none"
+    document.getElementById("third").style.display="none"}
+	
+	
+	
 }
  
       
