@@ -697,7 +697,7 @@ span{text-align:center;}
             <tr id="sin">
                 <td style="padding:0px;&quot;"><p style="margin:0px;padding:0px;float:left;margin-top:0px;
 transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b></p><br></td>
-                <td><img id="qrImg" style="width: 50px;height: 50px;"></td>
+		    <td><center><img id="qrImg" style="width: 50px;height: 50px;"></center></td>
                 <td id="sign"><p><b>Signature:</b></p><p style="font-size:11px;">Product Given</p><p></p>      <div id="scol"></div>
                 </td>
             </tr>
@@ -718,6 +718,7 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
 <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
 							   
 <script>
+	
   // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyCUxrHCbYxcEmiCy56gHzOgbP2c8RVrCAY",
@@ -754,6 +755,7 @@ var database = firebase.database();
 		   function pnt(){window.print();}
 		    window.addEventListener("beforeprint", function() { document.getElementById("btns").style.display="none"});					  
 		    window.addEventListener("afterprint", function() {document.getElementById("btns").style.display="block"});	
+		   
 function get_data(myData){
  
 
@@ -886,7 +888,7 @@ var sub_total = document.getElementById("sttl")
 
 var qr=document.getElementById("qrImg")
 	qr.src="https://chart.googleapis.com/chart?chs=500x500&cht=qr&choe=UTF-8&chld=l|0&chl=https://devjewellers.github.io/invoice/?dev-jewellers-"+myData.invoice_no;
-
+document.getElementsByTagName("title")[0].innerHTML=myData.name+"- Dev Jewellers Invoices"
 invoice_no.value=myData.invoice_no 
 invoice_date.value=myData.date 
 name.value=myData.name 
