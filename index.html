@@ -1840,15 +1840,16 @@ for(s=1;s<=objLength(customer_length);s++){
 					  
 					  
 					   var invoiceNo= document.getElementById("inno")
-											if(invoiceNo.value==""){
+											
+					  var saveBool=false
+					  function countSave(){
+if(invoiceNo.value==""){
 alert("Please Fill Invoice No!")
 invoiceNo.style.backgroundColor="red"
 invoiceNo.style.outline="5px solid blue"	
 }
 					else{save();
-					alert("Data Saved Successfully!")}
-					  var saveBool=false
-					  function countSave(){
+					alert("Data Saved Successfully!")}			
 					  if (saveBool==false) {
 					 
 
@@ -1879,7 +1880,7 @@ invoiceNo.style.outline="5px solid blue"
 <script>											     
 		var invoicen=document.getElementById("inno")											     
 			invoicen.addEventListener('click',function(){invoicen.style.backgroundColor="white"  
-							 invoicen.style.outline="initial"});			</script>
+							 invoicen.style.outline="-webkit-focus-ring-color auto 1px"});			</script>
 	<script>
 	
  // Code to handle install prompt on desktop
