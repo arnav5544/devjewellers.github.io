@@ -364,13 +364,7 @@ span{text-align:center;}
 </style>
 
     <script>
-	    //writing Date function for invoice date
-    var d= new Date();
-var yy=d.getFullYear();
-var mm=d.getMonth()+1;
-var dd=d.getDate();
-var date=dd+"/"+mm+"/"+yy;
-document.getElementById("ind").value=date;
+	
 	    function main(){
 		   
 
@@ -1734,6 +1728,15 @@ transform:translateY(-.4cm);margin-left:7px;width:2.8cm;"><b>Customer Sign.:</b>
 																		</div>															
 																		</section>								   
     </body>
+	<script>    
+//writing Date function for invoice date
+var d= new Date();
+var yy=d.getFullYear();
+var mm=d.getMonth()+1;
+var dd=d.getDate();
+var date=dd+"/"+mm+"/"+yy;
+document.getElementById("ind").value=date;
+			     </script>											
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
 
