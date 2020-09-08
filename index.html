@@ -364,7 +364,13 @@ span{text-align:center;}
 </style>
 
     <script>
-	
+	function unregisterSw(){
+	navigator.serviceWorker.getRegistrations().then(function(registrations) {
+ for(let registration of registrations) {
+  registration.unregister()
+} })
+		window.location.reload();
+	}
 	    function main(){
 		   
 
