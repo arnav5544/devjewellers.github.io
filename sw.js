@@ -5,7 +5,7 @@ self.addEventListener('install', function(e) {
        'https://devjewellers.github.io',
        'index.html',
        'script.js',
-
+       'loader.css',
        'devjewellers512.png',
 'devjewellers.webmanifest',
       'save.js',
